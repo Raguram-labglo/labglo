@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    <title>LabGlo : Product Crawl</title>
+{% endblock %}
+
+{% block content %}
+
+<!-- PAGE TITLE SMALL -->
+<div class="page-title-large page-title-img grey-dark-bg pt-130" style="background-image: url(/static/images/work-proc-bg.jpg)">
+    <div class="relative container align-left">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="page-title">Product Crawl</h1>
+            </div>
+
+            <div class="col-md-4">
+                <div class="breadcrumbs">
+                    <a href="{% url 'core:home' %}">Home</a>
+                    <span>/</span>
+                    <span class="">Tool</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page-section pt-110-b-80-cont">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- PRODUCT CRAWL FORM -->
+                <div class="">
+                    <form method="POST" id="product_crawl_form" novalidate="novalidate" accept-charset="utf-8">
+                        {% csrf_token %}
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                {{ form.url }}
+                                <div id="url" class="errors"></div>
+                            </div>
+
+                            <div class="col-md-6" style="margin-bottom:20px; margin-top:15px;">
+                                <!-- reCaptch and Submit Button -->
+                                <div class="row">
+                                <div class="col-md-12" style="margin-bottom:10px;">
+                                    <div class="text-left">
+                                        <div class="g-recaptcha" data-sitekey="{{ RECAPTCHA_PUBLIC_KEY }}" data-theme="light"></div>
+                                        <div id="__all__" class="errors text-left" style="width:100%;padding-left:30px"></div>
+                                  </div>
+                                </div>
+                                </div>
+                                <div class="row">
+                                <div class="col-md-6" style="margin-top:20px;">
+                                    <div class="text-left">
+                                        <button type="submit" class="button medium gray" id="product_crawl_submit"><img src="{% static 'images/loader.svg' %}" alt="Loader" id="id_loader" style="display:none;height:20px;"> Submit</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" style="margin-bottom:20px; margin-top:15px;">
+                                <p id="image-title"style="margin-bottom:5px; margin-top:25px;"></p>
+                                <img src="" id="id_image" style="max-height:300px;">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <pre id="json-renderer"></pre>
+            </div>
+        </div>
+      </div>
+</div>
+
+<script type="text/javascript" src="{% static 'js/jquery-1.11.2.min.js' %}"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#json-renderer").hide();
+    });
+
+    $(document).on('submit', '#product_crawl_form', function(event){
+        event.preventDefault();
+        $("#id_loader").show();
+        var csrftoken = '{{ csrf_token }}';
+        $.ajax({
+            url: '/product-crawl/',
+            headers:{
+                'X-CSRFToken': csrftoken,
+            },
+            data:{
+              'url': $('#id_url').val(),
+              'g-recaptcha-response': $("#g-recaptcha-response").val(),
+            },
+            type: 'POST',
+            success: function(json){
+                if (json['response'] != undefined){
+                    if (json['response']['title'] != undefined){
+                        $('#image-title').text(json['response']['title'])
+                    } else {
+                        $('#image-title').empty()
+                    }
+                    if (json['response']['images'] != undefined) {
+                        if (json['response']['images'][0] != undefined){
+                            if (json['response']['images'][0]['url'] != undefined){
+                                $('#id_image').attr('src', json['response']['images'][0]['url'])
+                            }
+                        }
+                    } else {
+                        $('#id_image').attr('src', '')
+                    }
+                    $('#json-renderer').jsonViewer(json['response']);
+                    $("#json-renderer").show();
+                    grecaptcha.reset();
+                    $(".errors").empty();
+                } else {
+                    var err_count = Object.keys(json['errors']).length;
+                    $(".errors").empty();
+                    if(err_count>0){
+                        $.each( json['errors'], function( key, value ) {
+                            $("#"+key).text(value);
+                        });
+                    }
+                }
+                $("#id_loader").hide();
+            },
+        });
+    });
+</script>
+
+{% endblock %}

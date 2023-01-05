@@ -1,0 +1,55 @@
+
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}
+    <title>LabGlo : Amazon</title>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="page-title-large page-title-img grey-dark-bg pt-250" >
+    <div class="relative container align-left">
+        <div class="row">
+            <div class="col-md-0">
+                <h1 class="page-title"> Generate Amazon Affiliate URL</h1>
+            </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- COTENT CONTAINER -->
+<div class="container p-140-cont">
+    <div class="row">
+        <!-- CONTENT -->
+        <div class="col-md-5">
+
+                    <!--<span class="bread-current">-->
+                         <form method="post" action="{% url 'core:amazon-affiliate'%}">
+                             {% csrf_token %}
+                    <input type="url"  placeholder="Enter your url here"  name="textbox-value" style="margin-right:25px; width:100%; max-width:300px;">
+                    <input type="submit" value="Submit" class="button medium gray">
+                       </form>
+                    <!--</span>-->
+                </div>
+        <div class="col-sm-8 blog-main-posts" style="margin-top:30px;">
+
+                <div class="blog-post wow fadeIn pb-50">
+                    {% if form %}
+                        <p>Here is your url<a href=" {{ form }}" target ="_blank"> {{ form }}</a></p>
+                    {% endif %}
+                </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+

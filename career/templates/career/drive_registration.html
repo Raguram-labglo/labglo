@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    <title>LabGlo : Drive Registration</title>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="page-title-cont page-title-large page-title-img grey-dark-bg pt-250" style="background-image: url(/static/images/placement-drive)">
+    <div class="relative container align-left">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="page-title">Drive Registration</h1>
+            </div>
+      
+            <div class="col-md-4">
+                <div class="breadcrumbs">
+                    <a href="{% url 'core:home' %}">Home</a>
+                    <span>/</span>
+                    <span class="bread-current"><a href="{% url 'career:drive_home' %}">Drives</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- COTENT CONTAINER -->
+<div class="container p-140-cont">
+    <div class="row">
+        <div class="col-md-12" id="id_success_div">
+            <div class="text-center">
+                <span id="id_success_txt"></span>
+            </div>
+        </div>
+        <div class="col-md-12" id="id_error_div">
+            <div class="text-center">
+                <span id="id_error_txt"></span>
+            </div>
+        </div>
+        <div class="post-prev-title">
+            <h3>{{ drive_obj.title }}</h3>
+        </div>
+        <div class="post-prev-info">
+            Last date to apply : {{ drive_obj.last_date_to_apply }}
+        </div>
+        <input type="hidden" name="drive-slug" id="id_drive_slug" value="{{ drive_obj.slug }}">
+        <form method="POST" action="{% url 'career:drive_registration' slug=drive_obj.slug %}" id="id_drive_registration_form" novalidate="novalidate" accept-charset="utf-8" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="col-md-12 mb-23">
+            {% for field in form %}
+                <div class="resume-field-drive" id="id_class_{{ field.name }}">
+                    {{ field.label }} {{ field }}
+                    <div id="{{ field.name }}" class="errors"></div>
+                </div>
+            {% endfor %}
+            </div>
+            <div class="row"></div>
+            <div class="col-md-6 mb-23">
+                <button type="submit" class="button medium gray" style="margin-left: 0px;">Register <img id="id_loader" src="{% static 'images/apply_loader.svg' %}" alt="Loader" width="25" /></button>
+                <!-- <p>* Marked fields are mandatory.</p> -->
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block footer %}
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $("input, select").addClass("form-control");
+        $("#id_class_city").hide()
+        $("#id_class_state").hide()
+        $("#id_loader").hide()
+        $("#id_success_div").hide();
+        $("#id_error_div").hide();
+        // $("#id_grade").attr("placeholder", "Grade/CGPA")
+        $('#id_mobile, #id_percentage').keypress(function (evt) {
+            var theEvent = evt || window.event;
+            var key = theEvent.keyCode || theEvent.which;
+            var keychar = String.fromCharCode(key);
+            //alert(keychar);
+            var keycheck = /[0-9]/;
+            // backspace || delete || escape
+            if (!(key == 8 || key == 27 || key == 46)) {
+                if (!keycheck.test(keychar)) {
+                    theEvent.returnValue = false; //for IE
+                    if (theEvent.preventDefault) theEvent.preventDefault(); //Firefox
+                }
+            }
+        });
+    });
+
+    var input = document.getElementById('id_location');
+    var options = {
+      types: ['(cities)'],
+    };
+    var autocomplete = new google.maps.places.Autocomplete(input, options);
+
+    autocomplete.addListener('place_changed', function() {
+        var place = autocomplete.getPlace();
+        if (!place.geometry) {
+            window.alert("Autocomplete's returned place contains no geometry");
+            $("#id_location").val("");
+            return;
+        } else {
+            var address = place.formatted_address.split(",");
+            var city = address[0].toLowerCase();
+            var state_lst = $.trim(address[1]).split(" ");
+            var state = state_lst[0].toLowerCase();
+            $("#id_city").val(city);
+            $("#id_state").val(state);
+        }
+    });
+
+
+    $(document).on('submit', '#id_drive_registration_form', function(event){
+        event.preventDefault();
+        $("#id_loader").show();
+        var data = new FormData(this);
+        submit_form(data);
+    });
+
+    function submit_form(data){
+        var csrftoken = '{{ csrf_token }}';
+        var slug = $("#id_drive_slug").val();
+        $.ajax({
+            url: '/careers/drive/registration/'+slug+"/",
+            headers:{
+                'X-CSRFToken': csrftoken,
+            },
+            data:data,
+            cache: false,
+            processData: false,
+            contentType: false,
+            type: 'POST',
+            success: function(json){
+                if (json['status']){
+                    $("#id_success_txt").empty();
+                    $("#id_success_txt").append(json['status']);
+                    $("#id_success_div").show();
+                    setTimeout(function(){
+                        $("#id_success_div").hide();
+                        window.location.href="/careers/drives/";
+                    }, 5000)
+                    $(".errors").empty();
+                    $("#id_drive_registration_form")[0].reset();
+                    // grecaptcha.reset();
+                }else if (json['error']){
+                    $("#id_error_txt").empty();
+                    $("#id_error_txt").append(json['error']);
+                    $("#id_error_div").show();
+                    setTimeout(function(){
+                        $("#id_error_div").hide();
+                    }, 5000)
+                    $(".errors").empty();
+                }else {
+                    var err_count = Object.keys(json['foo']).length;
+                    $(".errors").empty();
+                    $("#id_error_div").hide();
+                    if(err_count>0){
+                        $.each( json['foo'], function( key, value ) {
+                            if (key != "__all__"){
+                                $("#"+key).text(value[0]);
+                            } else {
+                                $("#id_error_txt").empty();
+                                $("#id_error_txt").append(value);
+                                $("#id_error_div").show();
+                                setTimeout(function(){
+                                    $("#id_error_div").hide();
+                                }, 5000)
+                                $(".errors").empty();
+                            }
+                            
+                        });
+                    }
+                }
+            $("#id_loader").hide();
+            },
+        });
+    }
+</script>
+
+{% endblock %}
+

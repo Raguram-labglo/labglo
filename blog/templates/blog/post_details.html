@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    <title>LabGlo : Blog - {{ post_obj.title }}</title>
+    <script type="text/javascript" src="{% static 'syntaxhighlight/scripts/shCore.js' %}"></script>
+    <script type="text/javascript" src="{% static 'syntaxhighlight/scripts/shBrushBash.js' %}"></script>
+    <script type="text/javascript" src="{% static 'syntaxhighlight/scripts/shBrushCpp.js' %}"></script>
+    <script type="text/javascript" src="{% static 'syntaxhighlight/scripts/shBrushCSharp.js' %}"></script>
+    <script type="text/javascript" src="{% static 'syntaxhighlight/scripts/shBrushCss.js' %}"></script>
+    <script type="text/javascript" src="{% static 'syntaxhighlight/scripts/shBrushDelphi.js' %}"></script>
+    <script type="text/javascript" src="{% static 'syntaxhighlight/scripts/shBrushDiff.js' %}"></script>
+    <script type="text/javascript" src="{% static 'syntaxhighlight/scripts/shBrushGroovy.js' %}"></script>
+    <script type="text/javascript" src="{% static 'syntaxhighlight/scripts/shBrushJava.js' %}"></script>
+    <script type="text/javascript" src="{% static 'syntaxhighlight/scripts/shBrushJScript.js' %}"></script>
+    <script type="text/javascript" src="{% static 'syntaxhighlight/scripts/shBrushPhp.js' %}"></script>
+    <script type="text/javascript" src="{% static 'syntaxhighlight/scripts/shBrushPlain.js' %}"></script>
+    <script type="text/javascript" src="{% static 'syntaxhighlight/scripts/shBrushPython.js' %}"></script>
+    <script type="text/javascript" src="{% static 'syntaxhighlight/scripts/shBrushRuby.js' %}"></script>
+    <script type="text/javascript" src="{% static 'syntaxhighlight/scripts/shBrushScala.js' %}"></script>
+    <script type="text/javascript" src="{% static 'syntaxhighlight/scripts/shBrushSql.js' %}"></script>
+    <script type="text/javascript" src="{% static 'syntaxhighlight/scripts/shBrushVb.js' %}"></script>
+    <script type="text/javascript" src="{% static 'syntaxhighlight/scripts/shBrushXml.js' %}"></script>
+    <link type="text/css" rel="stylesheet" href="{% static 'syntaxhighlight/styles/shCore.css' %}"/>
+    <link type="text/css" rel="stylesheet" href="{% static 'syntaxhighlight/styles/shThemeDefault.css' %}"/>
+{% endblock %}
+
+{% block content %}
+
+<script type="text/javascript">
+    SyntaxHighlighter.config.clipboardSwf = "{% static 'syntaxhighlight/scripts/clipboard.swf' %}";
+    SyntaxHighlighter.all();
+</script>
+
+
+<!-- PAGE TITLE SMALL -->
+<div class="page-title-large page-title-img grey-dark-bg pt-130" style="background-image: urls('{% static 'images/work-proc-bg' %}')">
+    <div class="relative container align-left">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="page-title">Blog</h1>
+            </div>
+      
+            <div class="col-md-4">
+                <div class="breadcrumbs">
+                    <a href="{% url 'core:home' %}">Home</a>
+                    <span>/</span>
+                    <span class=""><a href="{% url 'blog:blog_home' %}">Blog</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- COTENT CONTAINER -->
+<div class="container p-140-cont">
+    <div class="row">
+        <!-- CONTENT -->
+        <div class="col-sm-8 blog-main-posts">
+            <!-- <p><a href="{% url 'blog:blog_home' %}">Go Back</a></p> -->
+            {% if post_obj %}
+                <div class="blog-post wow fadeIn pb-50">
+                    <div class="post-prev-title">
+                        <h3><a href="{{ post_obj.get_absolute_url }}">{{ post_obj.title }}</a></h3>
+                    </div>
+                    <div class="post-prev-info">
+                        Published on {{ post_obj.created_on }}
+                    </div>
+                  
+                    <div class="post-prev-text">
+                        <p>{{ post_obj.summary|safe }}</p>
+                    </div>
+
+                    <div class="post-prev-text">
+                        <p>{{ post_obj.content|safe }}</p>
+                    </div>
+
+                    <div class="post-prev-more-cont clearfix">
+                        <div class="post-prev-more left">
+                            <div class="tags">
+                                {% for itm in post_obj.tags.all %}
+                                    <a href="{% url 'blog:blog_home' %}?tn={{ itm }}">{{ itm }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="disqus_thread"></div>
+            {% else %}
+                <div class="col-sm-8 blog-main-posts">
+                    <p>No data.</p>
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="col-sm-4 col-md-3 col-md-offset-1">
+            <!-- WIDGET -->
+            <div class="widget">
+                <div class="widget-body">
+                    <div class="tags">
+                        <p><a href="{% url 'blog:blog_home' %}">Go Back On Blog Page</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- WIDGET -->
+            <div class="widget">
+                <h5 class="widget-title">Tags</h5>
+                <div class="widget-body">
+                    <div class="tags">
+                        {% if blog_tag_list %}
+                            {% for itm in blog_tag_list %}
+                                <a href="{% url 'blog:blog_home' %}?tn={{ itm.name }}">{{ itm.name }}</a>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-labglo-com.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<!-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> -->
+<script id="dsq-count-scr" src="//https-labglo-com.disqus.com/count.js" async></script>
+{% endblock %}
+

@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Labglo : Time Slots</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/TableExport/4.0.11/css/tableexport.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="page-header text-center">
+            <h1>Drive Time Slots</h1>
+        </div>
+        
+        <p>Filter: <a href="?slot=09:30">09:30</a> <a href="?slot=11:00">11:00</a> <a href="?slot=12:30">12:30</a>
+        
+        <table class="table table-striped table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Time-Slot</th>
+            </tr>
+            {% for timeslot in timeslots %}
+                <tr>
+                    <td>{{ timeslot.drive_registration.id }}</td>
+                    <td>{{ timeslot.drive_registration.first_name }}</td>
+                    <td>{{ timeslot.drive_registration.last_name }}</td>
+                    <td>{{ timeslot.drive_registration.email }}</td>
+                    <td>{{ timeslot.drive_registration.mobile }}</td>
+                    <td>{{ timeslot.slot|date:"h:i" }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <p>Total entries: {{ timeslots.count }}</p>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://fastcdn.org/FileSaver.js/1.1.20151003/FileSaver.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/TableExport/4.0.11/js/tableexport.min.js"></script>
+
+        <script>
+            $("table").tableExport();
+        </script>
+
+    </div>
+</body>
+</html>

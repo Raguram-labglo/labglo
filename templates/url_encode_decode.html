@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    <title>LabGlo : URL Encode Decoder</title>
+{% endblock %}
+
+{% block content %}
+
+<!-- PAGE TITLE SMALL -->
+<div class="page-title-large page-title-img grey-dark-bg pt-130" style="background-image: url(/static/images/work-proc-bg.jpg)">
+    <div class="relative container align-left">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="page-title">URL ENcode Decode</h1>
+            </div>
+      
+            <div class="col-md-4">
+                <div class="breadcrumbs">
+                    <a href="{% url 'core:home' %}">Home</a>
+                    <span>/</span>
+                    <span class="">Tool</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container decoding" style="margin-top:50px;">
+	<div class="col-md-12 dcode-btn" id="id_action">
+		<button class="button medium gray action selected" type="submit" name="action" value="JSED">URL Encode/Decode</button>
+		<button class="button medium gray action" type="submit" name="action" value="Base64">Base64 Encode/Decode</button>
+	</div>
+
+	<div class="col-md-5">
+		<textarea class="form-control" name="string" id="id_input_text" rows="15" placeholder="Enter the text that you wish to encode or decode." ></textarea>
+		<div id="input1" class="errors"></div>
+		<br>
+	</div>
+
+	<div class="col-md-2">
+		<button class="button medium gray" type="submit" name="action" value="Encode" style="margin-top:50%" onclick="encode_decode(this)"> Encode url</button>
+		<button class="button medium gray" type="submit" name="action" value="Decode" style="margin-top:50px" onclick="encode_decode(this)"> Decode url</button>
+	</div>
+
+	<div class="col-md-5">
+		<textarea class="form-control" name="string2" id="id_output_text" rows="15" placeholder="Your results will appear here." ></textarea>
+	</div>
+</div>
+
+<script type="text/javascript" src="{% static 'js/jquery-1.11.2.min.js' %}"></script>
+
+<script type="text/javascript">
+    
+    $(".action").on("click", function(){
+    	var index = $(".action").index(this);
+    	if($('.action:eq('+index+')').hasClass("selected")==false){
+    		$('.action').removeClass("selected");
+      		$('.action:eq('+index+')').addClass("selected");
+      	}
+    });
+
+	function encode_decode(elem) {
+		var code_val  = $("#id_action").find('.selected').attr('value');
+		var action = $(elem).attr('value');
+		var input_txt = $("#id_input_text").val();
+		$("#id_output_text").empty();
+
+		if (input_txt=='' || input_txt==undefined){
+			$("#input1").empty();
+            $("#input1").append("Please enter the text to encode or decode.");
+            $("#input1").show();
+            setTimeout(function(){
+              $("#input1").hide();
+            }, 5000)
+		} else if (code_val=="JSED"){
+			if ( action=="Encode"){
+				var encoded = encodeURIComponent(input_txt);
+				$("#id_output_text").append(encoded);
+			} else if ( action=="Decode"){
+				var decoded = decodeURIComponent(input_txt);
+				$("#id_output_text").append(decoded);
+			}
+		} else if (code_val=="Base64"){
+			var data = {
+				'code_val' : code_val,
+				'action' : action,
+				'input_txt' : input_txt,
+			}
+			coded_encryption(data);
+		}
+    }
+
+    function coded_encryption(elem){
+    	$.ajax({
+            url:"/coded/encryption/",
+            data: elem,
+            type: "GET",
+            dateType: "json",
+            success: function( json ) {
+                if (json['result']){
+                	$("#id_output_text").append(json['result']);
+                } else if (json['error']){
+                	$("#input1").empty();
+		            $("#input1").append(json['error']);
+		            $("#input1").show();
+		            setTimeout(function(){
+		              $("#input1").hide();
+		            }, 5000)
+                }
+            },
+        });
+    }
+</script>
+
+
+{% endblock %}

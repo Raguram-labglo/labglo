@@ -1,0 +1,167 @@
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Documento sin t&iacute;tulo</title>
+<style type="text/css">
+<!--
+.Estilo1 {
+	font-size: large;
+	font-weight: bold;
+	color: #333333;
+	font-family: "Century Gothic";
+}
+.Estilo2 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #646464;
+}
+-->
+</style></head>
+
+<body>
+<table width="600" border="0" cellspacing="0" cellpadding="0" style="font-family:Arial, Helvetica, sans-serif; font-size:12px;" align="center">
+  <tr>
+    <td colspan="3"><p dir="ltr" id="docs-internal-guid-784b7e23-c4eb-f1fc-9f1f-96f97073e2ba">Dear {{ user_obj.first_name }},</p>
+      <p dir="ltr">Greetings from Labglo!!</p>
+      <p dir="ltr">Thank you very much for your interest in the Trainee Software Engineer position at LabGlo.</p>
+    <p dir="ltr">Please find the selection criteria and your schedule for the recruitment drive. </p></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="3"><table style="width:100%; border:1px solid #ccc; border-collapse:collapse" cellpadding="5" cellspacing="0" border="1" bordercolor="#ccc">
+    <colgroup>
+      <col width="184" />
+      <col width="363" />
+    </colgroup>
+    <tr style="background:#ddd">
+      <td><p dir="ltr"> Process</p></td>
+      <td><p dir="ltr">Remarks</p></td>
+    </tr>
+    <tr>
+      <td><p dir="ltr">Aptitude Test (Written)</p></td>
+      <td><p dir="ltr">40 Objective type questions - 45 minutes</p></td>
+    </tr>
+    <tr>
+      <td><p dir="ltr">Coding Test</p></td>
+      <td><p dir="ltr">For the shortlisted candidates from Aptitude Test</p></td>
+    </tr>
+    <tr>
+      <td><p dir="ltr">Technical Interview</p></td>
+      <td><p dir="ltr">For the shortlisted candidates from Coding Test</p></td>
+    </tr>
+    <tr>
+      <td><p dir="ltr">HR Interview</p></td>
+      <td><p dir="ltr">For the shortlisted candidates from Technical Interview</p></td>
+    </tr>
+  </table></td>
+  </tr>
+  <tr>
+    <td colspan="3">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="3"><ul>
+  <li dir="ltr">
+    <p dir="ltr">Your allotted time slot is: {{ slot_details }}</p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">Your Registration Number is: {{ user_obj.id }} </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">You are requested to report at least 15 minutes before of the allotted time.</p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">Place of Interview : LabGlo, 2209, Yamuna, Technopark Phase III SEZ Campus, Kulathoor Trivandrum</p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">Report at: Front Office, Second Floor, Yamuna, Technopark Phase III</p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">Please bring a set of resume and the available originals of your academic qualifications.</p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">Show the softcopy or hard copy of this email at the North Gate of Technopark Phase III to get the permission to enter in to the campus. &nbsp;</p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">Help Desk : &nbsp;0471-4000543 / &nbsp;8606076636 / &nbsp;9961465454</p>
+  </li>
+</ul></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center"><p dir="ltr">Wish you all the best!</p></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="3">Thanks and Regards,&nbsp;<br />
+      <br />
+      <div>
+        <div dir="ltr">
+          <div dir="ltr">
+            <div dir="ltr"><table style="color:#000000;font-family:helvetica,arial,sans-serif;font-size:medium;width:452px" cellspacing="0" cellpadding="0" border="0">
+<tbody>
+<tr valign="top">
+<td style="padding-right:10px;width:10px;max-width:120px"><img src="https://ci3.googleusercontent.com/proxy/jTuhYk_bRNnjdinL92rWGpgocJlt1XbmubZAUP0ob69X7hWtJ6n3lVOoKcDCBmzI-xYEhHW5UGvKk1DtVe1DexcGLPZDTQJjPg=s0-d-e1-ft#http://labglo.com/Email%20Signature/logo-footer.png" alt="" class="CToWUd" width="113" height="111"><br>
+<div align="center"><small><small><span style="color:#666666"><small><small><small><small>DEVELOPING FUTURE<br> </small></small></small></small></span><img src="https://ci3.googleusercontent.com/proxy/LbzfsVv9Wk73b4ahUxPdAUca8F49xE4HDWLplNIauo-7rVipik--1fSpS1dMUpXEBapCFkBG2Xg6cp1b-rQ7RZxZ6Lpf4RcYRA=s0-d-e1-ft#http://labglo.com/Email%20Signature/tech%20logo.jpg" alt="" class="CToWUd" width="120" height="49"><br> </small></small></div>
+</td>
+<td style="padding-left:20px; font-size:11px;"><div><strong>HR Team</strong><br>
+                        </div>
+                            <div><strong>Labglo,&nbsp;</strong>2209, 2nd Floor, Yamuna&nbsp;Technopark Phase III&nbsp;</div>
+                          <div>Trivandrum&nbsp;KERALA 695 581</div>
+                          <div>p:+91-471- 4000543&nbsp;| e:<a href="mailto:info@labglo.com" target="_blank">info@labglo.com</a>&nbsp;| w:<a href="https://www.labglo.com/" target="_blank">www.labglo.com</a>&nbsp;| &nbsp;</div>
+                        <div style="padding-top:10px;">
+                            <i>
+                            <a href="https://www.facebook.com/labglo/" target="_blank"><img alt="" src="https://labglo.com/Email%20Signature/facebook2.png" class="CToWUd" width="24" vspace="2" hspace="2" height="24" border="0" align="top"></a> 
+                            <a href="https://www.linkedin.com/company/labglo" target="_blank"><img src="https://labglo.com/Email%20Signature/linkedin1.png" alt="" class="CToWUd" width="24" vspace="2" hspace="2" height="24" border="0" align="top"></a>
+                            <a href="https://twitter.com/labglotech" target="_blank"><img alt="" src="https://labglo.com/Email%20Signature/twitter.png" class="CToWUd" width="24" vspace="2" hspace="2" height="24" border="0" align="top"></a>
+                            <a href="https://www.pinterest.com/labglo/" target="_blank"><img alt="" src="https://labglo.com/Email%20Signature/pinterest11.png" class="CToWUd" width="24" vspace="2" hspace="2" height="24" border="0" align="top"></a>
+                            <a href="https://www.xing.com/companies/labglo" target="_blank"><img alt="" src="https://labglo.com/Email%20Signature/xing2.png" class="CToWUd" width="24" vspace="2" hspace="2" height="24" border="0" align="top"></a>
+                            <a href="https://plus.google.com/102838373585456330318/about" target="_blank"><img alt="" src="https://labglo.com/Email%20Signature/google-plus.png" class="CToWUd" width="24" vspace="2" hspace="2" height="24" border="0" align="top"></a>
+                            <a href="https://www.reddit.com/user/labglo/" target="_blank"><img alt="" src="https://labglo.com/Email%20Signature/reddit10.png" class="CToWUd" width="24" vspace="2" hspace="2" height="24" border="0" align="top"></a>
+                            <span class="im"><br><br></span>
+                            </i>
+                        </div></td>
+</tr>
+</tbody>
+</table></div>
+          </div>
+        </div>
+      </div>
+<em style="font-size:9px;"><strong><br />
+      <br />
+    Confidentiality and Security:</strong>&nbsp;This   e-mail and any associated files transmitted with it are confidential   and solely for the intended recipient. If you are not the named   addressee, do not disseminate, distribute, copy or alter this e-mail. If   you have received this information in error, please notify the sender   immediately and delete this communication permanently from your records.</em></td>
+  </tr>
+</table>
+
+
+
+</body>
+</html>

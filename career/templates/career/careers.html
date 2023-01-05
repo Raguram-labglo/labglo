@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    <title>LabGlo : Careers</title>
+{% endblock %}
+
+
+{% block content %}
+
+<!-- PAGE TITLE BIG IMG -->
+    <div class="page-title-cont page-title-large page-title-img grey-dark-bg pt-250" style="background-image:url(/static/images/career.jpg); background-position: center 90px; background-size: 100% auto; padding-top:350px; background-repeat:no-repeat;">
+      <div class="relative container align-left">
+        <div class="row">
+
+          <div class="col-md-8">
+            <h1 class="page-title">CAREERS</h1>
+            <div class="page-sub-title">
+              Providing the skills needed to deliver results at pace</a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="breadcrumbs">
+              <a href="{% url 'core:home' %}">Home</a><span class="slash-divider">/</span><span class="bread-current">CAREERS</span>
+            </div>
+          </div>
+
+        </div>
+      </div><div id="currentjob" ></div>
+    </div>
+
+    <!-- CONTAINER -->
+    <div class="container p-140-cont">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="fes4-box wow fadeIn col-xs-12 col-sm-6 col-md-6" style="visibility: visible; animation-name: fadeIn;">
+                    <h2 class="section-title">CURRENT <span class="bold">OPENINGS</span></h2>
+                </div>
+
+                <div class="ts-container col-xs-12 col-sm-6 col-md-6">
+                    <div class="ts-icon-container-bg">
+                        <div class="ts-icon-container">
+                            <span class="icon_quotations main-menu-icon" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <div class="ts-main-container-bg">
+                        <div class="ts-main-container clearfix">
+                            <div class="ts-text-container">
+                                <div>Interested in joining us ? <a href="{% url 'career:submit_resume' %}"><b>Submit</b></a> your updated CV. <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% if object_list %}
+                {% for post in object_list %}
+                    <div class="col-md-12">
+                        <h4 style="font-weight:bold;">{{ post.job_title }}</h4>
+                        <dl class="dl-horizontal">
+                            {% if post.job_description != "" %}
+                                <dt>Description</dt> <dd>{{ post.job_description|safe }}</dd>
+                            {% endif %}
+
+                            {% if post.additional_info != "" %}
+                                <dt>Additional Info</dt> <dd>{{ post.additional_info }}</dd>
+                            {% endif %}
+
+                            {% if post.required_qualification != "" %}
+                                <dt>Req. Qualification</dt> <dd>{{ post.required_qualification }}</dd>
+                            {% endif %}
+
+                            <dt>Required Skills</dt> <dd>{% for item in post.skills.all %}{{ item }}, {% endfor %}</dd>
+
+                            {% if post.is_fresher == True %}
+                                <dt>Fresher</dt> <dd>Can apply.</dd>
+                            {% endif %}
+
+                            {% if post.min_exp != "" %}
+                                <dt>Min. Experience</dt> <dd>{{ post.min_exp }} Yrs.</dd>
+                            {% endif %}
+
+                            {% if post.max_exp != "" %}
+                                <dt>Max. Experience</dt> <dd>{{ post.max_exp }} Yrs.</dd>
+                            {% endif %}
+
+                            {% if post.location != "" %}
+                                <dt>Location</dt> <dd>{{ post.location }}</dd>
+                            {% endif %}
+
+                            {% if post.posting_date != "" %}
+                                <dt>Posting Date</dt> <dd>{{ post.posting_date|date:"d M Y" }}</dd>
+                            {% endif %}
+
+                            {% if post.closing_date != "" %}
+                                <dt>Closing Date</dt> <dd>{{ post.closing_date|date:"d M Y" }}</dd>
+                            {% endif %}
+
+                            {% if post.contact_email != "" %}
+                                <dt>Contact Email</dt> <dd>{{ post.contact_email }}</dd>
+                            {% endif %}
+
+                            {% if post.reference_link != "" %}
+                                <dt>Reference Link</dt> <dd>{{ post.reference_link }}</dd>
+                            {% endif %}
+                        </dl>
+                        <div class="col-md-6 mb-23">
+                            <a href="{{ post.get_absolute_url }}" id="apply"><button type="submit" class="button medium gray">APPLY</button></a>
+                        </div>
+                    </div>
+                    <div class="divider divider-center"><i class="fa fa-circle"></i></div>
+                {% endfor %}
+            {% else %}
+                <div class="col-md-12">
+                    No openings presently. Please submit your updated resume for future reference.
+                </div>
+            {% endif %}
+            <!-- WORK NAVIGATION -->
+            {% if is_paginated %}
+                <div class="work-navigation clearfix">
+                    {% if page_obj.has_previous %}
+                        <a href="?page={{ page_obj.previous_page_number }}" class="work-prev"><span><span class="icon icon-arrows-left"></span>&nbsp;Prev</span></a>
+                    {% else %}
+                        <a class="work-prev"><span><span class="icon icon-arrows-left"></span>&nbsp;Prev</span></a>
+                    {% endif %}
+                    <a href="#" class="work-all"><span>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</span></a>
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}" class="work-next"><span>Next&nbsp;<span class="icon icon-arrows-right"></span></span></a>
+                    {% else %}
+                        <a class="work-next"><span>Next&nbsp;<span class="icon icon-arrows-right"></span></span></a>
+                    {% endif %}
+                </div>
+            {% endif %}
+        <div id="lifeat"></div>
+      </div></div>
+
+    </div>
+
+    <div class="page-section ">
+        <div class="work-proc-1-bg2">
+            <div class="container fes4-cont">
+                <div class="row">
+                    <div class="col-md-2 ">
+                        <div class="mb-50">
+                            <h2 class="section-title" style="color:grey;border-color:grey;">LIFE  <span class="bold">@ LABGLO</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>        <!-- NEWS LETTER -->
+    <div class="page-section p-110-cont">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row client-row ">
+                        <div class="col-xs-12 col-sm-12 text-left">Labglo supports and maintains a workplace culture of promoting an atmosphere that instills efficiency and positive attitude among our employees, motivating them and keeping morales high. We acknowledge the vital importance of work-life balance, thus offering flexible work arrangements. We move forward as a team build with trust, inspiring and creating new ideas, that helps fuels our passion for excellence in achieving our goals in delivering perfection to our clients. <br/><br/>
+                        At Labglo, both team and individual contributions are rewarded at every step. With the opportunity to work with industry experts in a rapidly growing business atmosphere of new ideas and positive energy, there are no limits to what you can achieve.<br/><br/>
+
+                        So,  are you looking for a workplace that provides incredible work challenges, tons of opportunities to learn something new, and the chance to have some fun along the way?? Come, and join our legion of tech savvy professionals, coz we aim to deliver on all fronts.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

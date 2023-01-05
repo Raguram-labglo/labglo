@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    <title>LabGlo : Drive</title>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="page-title-cont page-title-large page-title-img grey-dark-bg pt-250" style="background-image: url(/static/images/placement-drive.jpg)">
+    <div class="relative container align-left">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="page-title">Drives</h1>
+            </div>
+      
+            <div class="col-md-4">
+                <div class="breadcrumbs">
+                    <a href="{% url 'core:home' %}">Home</a>
+                    <span>/</span>
+                    <span class="bread-current">Drive</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- COTENT CONTAINER -->
+<div class="container p-140-cont">
+    <div class="row">
+        <!-- CONTENT -->
+        <div class="col-sm-8 blog-main-posts">
+            {{ qset }}
+            {% if object_list %}
+                {% for drive_obj in object_list %}
+                    <!-- POST ITEM -->
+                    <div class="blog-post wow fadeIn pb-20">
+                        <div class="post-prev-title">
+                            <h3><a href="{{ drive_obj.get_absolute_url }}">{{ drive_obj.title }}</a></h3>
+                        </div>
+                      
+                        <div class="post-prev-info">
+                            Published on {{ drive_obj.created_on }}
+                        </div>
+                      
+                        <div class="post-prev-text">
+                            <p>Drive from date {{ drive_obj.from_date}}, to date {{ drive_obj.to_date}}</p>
+                            <p>Last date to apply : {{ drive_obj.last_date_to_apply}}</p>
+                            <p><a href="{{ drive_obj.get_absolute_url }}" class="blog-more">READ MORE</a></p>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="blog-post wow fadeIn pb-50">
+                    <p>No drives presently.</p>
+                </div>
+            {% endif %}
+
+            <!-- DIVIDER -->
+            <hr class="mt-0 mb-0">
+            
+            <!-- WORK NAVIGATION -->
+            {% if is_paginated %}
+                <div class="work-navigation clearfix">
+                    {% if page_obj.has_previous %}
+                        <a href="?page={{ page_obj.previous_page_number }}" class="work-prev"><span><span class="icon icon-arrows-left"></span>&nbsp;Prev</span></a>
+                    {% else %}
+                        <a class="work-prev"><span><span class="icon icon-arrows-left"></span>&nbsp;Prev</span></a>
+                    {% endif %}
+                    <a href="#" class="work-all"><span>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</span></a>
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}" class="work-next"><span>Next&nbsp;<span class="icon icon-arrows-right"></span></span></a>
+                    {% else %}
+                        <a class="work-next"><span>Next&nbsp;<span class="icon icon-arrows-right"></span></span></a>
+                    {% endif %}
+                </div>
+            {% endif %}
+            <!-- DIVIDER -->
+            <hr class="mt-0 mb-0">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

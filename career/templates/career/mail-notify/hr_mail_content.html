@@ -1,0 +1,67 @@
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+
+<body style="font-family:Arial, Helvetica, sans-serif; font-size:12px;">
+<p>Dear team,</p>
+<p>We got a new job application, Please have a look on below details.</p>
+<p>Candidate applied for the post: {{ post_name }}</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="20" style="background:#f2f2f2">
+  <tr>
+    <td><table width="600" border="1" align="left" cellpadding="0" cellspacing="0" style="background:#fff; border-collapse:collapse; border-color:#ccc;">
+     
+        <tr>
+            <td colspan="2" style="line-height:18px; padding:10px 40px; background:#ddd; border-color:#ccc;" ><strong>Candidate Details</strong></td>
+        </tr>
+        <tr>
+            <td width="198" style="line-height:18px; padding:10px 40px; border-color:#ccc;" >First Name</td>
+            <td width="402" style="line-height:18px; padding:10px 40px; border-color:#ccc;" >&nbsp; {{ candidate_obj.first_name }}</td>
+        </tr>
+        <tr>
+            <td style="line-height:18px;padding:10px 40px; border-color:#ccc;" >Last Name </td>
+            <td style="line-height:18px;padding:10px 40px; border-color:#ccc;" >&nbsp;{{ candidate_obj.last_name }}</td>
+        </tr>
+        <tr>
+            <td style="line-height:18px;padding:10px 40px; border-color:#ccc;" >Phone</td>
+            <td style="line-height:18px;padding:10px 40px; border-color:#ccc;" >&nbsp;{{ candidate_obj.phone }}</td>
+        </tr>
+        <tr>
+            <td style="line-height:18px;padding:10px 40px; border-color:#ccc;" >Email</td>
+            <td style="line-height:18px;padding:10px 40px; border-color:#ccc;" >&nbsp;{{ candidate_obj.email }}</td>
+        </tr>
+        <tr>
+            <td style="line-height:18px;padding:10px 40px; border-color:#ccc;" >Current Company </td>
+            <td style="line-height:18px;padding:10px 40px; border-color:#ccc;" >&nbsp;{{ candidate_obj.current_company }}</td>
+        </tr>
+        <tr>
+            <td style="line-height:18px;padding:10px 40px; border-color:#ccc;" >Current Location </td>
+            <td style="line-height:18px;padding:10px 40px; border-color:#ccc;" >&nbsp;{{ candidate_obj.current_location }}</td>
+        </tr>
+        <tr>
+            <td style="line-height:18px;padding:10px 40px; border-color:#ccc;" >Total Experience </td>
+            <td style="line-height:18px;padding:10px 40px; border-color:#ccc;" >&nbsp;{{ candidate_obj.total_exp }} months</td>
+        </tr>
+        <tr>
+            <td style="line-height:18px;padding:10px 40px; border-color:#ccc;" >Relavant Experience </td>
+            <td style="line-height:18px;padding:10px 40px; border-color:#ccc;" >&nbsp;{{ candidate_obj.relevant_exp }} months</td>
+        </tr>
+        <tr>
+            <td style="line-height:18px;padding:10px 40px; border-color:#ccc;" >Current CTC </td>
+            <td style="line-height:18px;padding:10px 40px; border-color:#ccc;" >&nbsp;{{ candidate_obj.current_ctc }}</td>
+        </tr>
+        <tr>
+            <td style="line-height:18px;padding:10px 40px; border-color:#ccc;" >Expected CTC </td>
+            <td style="line-height:18px;padding:10px 40px; border-color:#ccc;" >&nbsp;{{ candidate_obj.expected_ctc }}</td>
+        </tr>
+        <tr>
+            <td style="line-height:18px;padding:10px 40px; border-color:#ccc;" >Notice Period </td>
+            <td style="line-height:18px;padding:10px 40px; border-color:#ccc;" >&nbsp;{{ candidate_obj.notice_period }} days</td>
+        </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

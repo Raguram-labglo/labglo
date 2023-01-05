@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+{% crispy form %}
+
+{% block title %}
+    <title>LabGlo : Contact Us</title>
+{% endblock %}
+
+{% block content %}
+  <!-- PAGE TITLE -->
+  <div class="page-title-cont page-title-large page-title-img grey-dark-bg pt-250" style="background-image: url(/static/images/work-proc-bg.jpg)">
+    <div class="relative container align-left">
+      <div class="row">
+         
+        <div class="col-md-8">
+          <h1 class="page-title">CONTACT</h1>
+          <div class="page-sub-title">
+           
+          </div>
+        </div>
+         
+        <div class="col-md-4">
+          <div class="breadcrumbs">
+            <a href="{% url 'core:home' %}">Home</a><span class="slash-divider">/</span><span class="bread-current">CONTACT</span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+   <div id="contact-link" class="page-section p-110-cont grey-light-bg">
+      <div class="container">
+        <div class="row">
+        	<div class="col-md-4 col-sm-6">
+            <div class="cis-cont">
+              <div class="cis-icon">
+                <div class="icon icon-basic-geolocalize-05"></div>
+              </div>
+              <div class="cis-text">
+                <h3><span class="bold">LABGLO, INDIA</span></h3>
+                <p>Module 2209, 2nd Floor, Yamuna, <br>Technopark Phase III, Sez Campus, <br>Trivandrum, <br>Kerala 695581.</p>
+  	  <p> <p><img class="adjust_one" src="{% static 'images/lab.png' %}" ></p><!--<a href="mailto:info@labglo.com"> <i class="fa fa-envelope"></i> info@labglo.com</a></p>
+  	  <p><i class="fa fa-phone"></i> +91 471 4000543</p>-->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="cis-cont">
+              <div class="cis-icon">
+                <div class="icon icon-basic-geolocalize-05"></div>
+              </div>
+              <div class="cis-text">
+                <h3><span class="bold">LABGLO, AUSTRALIA</span></h3>
+                <p>  136 Albert Rd, <br>  South Melbourne,<br>  Victoria 3205</p>
+  	  <p><img class="adjust" src="{% static 'images/dv.png' %}" ></p><!--<i class="fa fa-envelope"></i> dvlahos@labglo.com</a></p>
+  	  <p><i class="fa fa-phone"></i> +61 3 8692 5820</p>
+  	  <p><i class="fa fa-phone"></i> +61 412 405 489</p>-->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+            <div class="cis-cont">
+              <div class="cis-icon">
+                <div class="icon icon-basic-message-multiple"></div>
+              </div>
+              <div class="cis-text">
+                <h3><span class="bold">ENQUIRY</span></h3>
+                <p><img class="adjust_two" src="{% static 'images/infor.png' %}" ></p>
+                <!--<p><a href="mailto:info@labglo.com"><i class="fa fa-envelope"></i> info@labglo.com</a></p>
+  	  <p><i class="fa fa-phone"></i> +91 471 4000543</p>-->
+              </div>
+            </div>
+          </div>
+    
+          
+        </div>
+      </div>        
+    </div>        
+
+    <!-- GOOGLE MAP & CONTACT FORM -->
+    <div class="page-section">
+      <div class="container-fluid">
+        <div class="row">
+        
+          <div class="col-md-6">
+            <div class="row" style="margin-right:-10px;">
+             <iframe style="pointer-events:none;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d126274.97637385454!2d76.9154585!3d8.4903372!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bef6cf0d5c0d%3A0x830e297a9cbab598!2sLabGlo!5e0!3m2!1sen!2sin!4v1445327010555" width="100%" height="540" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+           <div class="row" style="margin-left:-10px;">
+  		<iframe style="pointer-events:none;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.039420936939!2d144.9673833153193!3d-37.835962979748395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6680300f75e89%3A0xaeabb9f9f457a7b0!2s136+Albert+Rd%2C+South+Melbourne+VIC+3205%2C+Australia!5e0!3m2!1sen!2sin!4v1446699913517" width="100%" height="540" frameborder="0" style="border:0" allowfullscreen></iframe>
+              <!-- TITLE -->
+              
+                            
+              <!-- CONTACT FORM -->
+            
+            </div>
+  	</div>
+          </div>
+            
+        </div>
+      </div>
+    </div>
+    
+    <!-- DIVIDER -->
+    <hr class="mt-0 mb-0">          
+    
+    <!-- CONTACT INFO SECTION 1 -->
+   
+
+
+          <!-- CLIENTS 1 & TESTIMONIALS 1 -->
+          <div class="page-section pt-110-b-80-cont">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                                  
+                    <!-- CONTACT FORM -->
+                    <div class="">
+                      <form method="POST" action="php/contact-form.php" id="contact-form" novalidate="novalidate">
+                      
+                        <div class="row">
+                          <p>Thank you for contacting us. Our team will get back you soon..! </p>    
+                          <p>Please click <a href="{% url 'core:home' %}">HERE</a> to go back on home page.</p>
+                        </div>
+                                                
+                      </form> 
+                      <div id="contactSuccess" class="alert alert-success hidden">
+                        <strong>Success!</strong> Your message has been sent to us.
+                      </div>
+                    
+                      <div id="contactError" class="alert alert-danger hidden">
+                        <strong>Error!</strong> There was an error sending your message.
+                      </div>
+                    </div>
+                  
+
+                </div>
+                  
+              </div>
+            </div>
+          </div>
+
+  <!-- NEWS LETTER -->
+  <div class="divider divider-center"><i class="fa fa-circle"></i></div>
+
+{% endblock %}

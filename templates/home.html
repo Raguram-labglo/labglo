@@ -1,0 +1,664 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+<title>LabGlo : Full Stack Python Django, Mobile Application And VoIP</title>
+<style type="text/css">
+	.header.no-transparent .header-wrapper {
+		background: transparent !important;
+	}
+</style>
+{% endblock %}
+
+{% block content %}
+
+
+<!-- REVO SLIDER FULLSCREEN 1 -->
+<div class="relative">
+	<div class="rs-fullscr-container">
+		<div id="rs-fullscr" class="tp-banner">
+			<ul>
+				<!-- SLIDE 1 -->
+				<li data-transition="zoomout" data-slotamount="1" data-masterspeed="1500">
+					<!-- MAIN IMAGE --><img src="{% static 'images/dummy.png' %}" alt="slidebg1"
+						data-lazyload="{% static 'images/slide_1_1.jpg' %}" data-bgposition="center top"
+						data-bgfit="cover" data-bgrepeat="no-repeat">
+					<!-- LAYERS -->
+					<!-- LAYER NR. 0 BG CAPTIONS -->
+					<div class="tp-caption rs-parallaxlevel-4 zoomout" data-x="left" data-y="center" data-speed="1300"
+						data-start="200" data-easing="Power3.easeInOut" style="z-index: 0;">
+						<div class="slider-bg-white-cap"></div>
+					</div>
+					<!--PARALLAX & OPACITY container -->
+					<div class="rs-parallaxlevel-4 opacity-scroll2">
+						<!-- LAYER NR. 1 -->
+						<div class="tp-caption dark-light-100 tp-left sfb tp-resizeme" data-x="640" data-y="205"
+							data-speed="500" data-start="850" data-easing="Power1.easeInOut" data-splitin="none"
+							data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1"
+							style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">Your Ideas Are
+						</div>
+						<!-- LAYER NR. 2 -->
+						<div class="tp-caption dark-black-100 tp-left sfb tp-resizeme" data-x="650" data-y="275"
+							data-speed="500" data-start="1050" data-easing="Power1.easeInOut" data-splitin="none"
+							data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1"
+							style="z-index: 8; max-width: auto; max-height: auto; white-space: nowrap;">The Begining
+						</div>
+						<!-- LAYER NR. 3 LINE -->
+						<div class="tp-caption slider-1-cap-line tp-left hide-0-736 sfb tp-resizeme" data-x="650"
+							data-y="360" data-speed="1000" data-start="1250" data-easing="Power3.easeInOut"
+							data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1"
+							style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+							<div class="cap-line"></div>
+						</div>
+						<!-- LAYER NR. 4 -->
+						<div class="tp-caption dark-light-32 fs16-when-0-736 tp-left sfb tp-resizeme" data-x="650"
+							data-y="380" data-speed="900" data-start="1500" data-easing="Power3.easeInOut"
+							data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1"
+							style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">We can help you
+							see the bigger picture.</div>
+					</div>
+				</li>
+				<!-- SLIDE 2 -->
+				<li data-transition="zoomout" data-slotamount="1" data-masterspeed="1500">
+					<!-- MAIN IMAGE --><img src="{% static 'images/dummy.png' %}" alt="slidebg2"
+						data-lazyload="{% static 'images/slide_1_2.jpg' %}" data-bgposition="center top"
+						data-bgfit="cover" data-bgrepeat="no-repeat">
+					<!-- LAYERS -->
+					<!-- LAYER NR. 0 BG CAPTIONS -->
+					<div class="tp-caption rs-parallaxlevel-4 zoomout" data-x="left" data-y="center" data-speed="1300"
+						data-start="200" data-easing="Power3.easeInOut" style="z-index: 0;">
+						<div class="slider-bg-white-cap"></div>
+					</div>
+					<!--PARALLAX & OPACITY container -->
+					<div class="rs-parallaxlevel-4 opacity-scroll2">
+						<!-- LAYER NR. 1 -->
+						<div class="tp-caption dark-light-100 tp-left sfb tp-resizeme" data-x="705" data-y="470"
+							data-speed="500" data-start="850" data-easing="Power1.easeInOut" data-splitin="none"
+							data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1"
+							style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">Let's </div>
+						<!-- LAYER NR. 2 -->
+						<div class="tp-caption dark-black-100 tp-left sfb tp-resizeme" data-x="713" data-y="530"
+							data-speed="400" data-start="1050" data-easing="Power1.easeInOut" data-splitin="none"
+							data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1"
+							style="z-index: 8; max-width: auto; max-height: auto; white-space: nowrap;">Work together
+						</div>
+						<!-- LAYER NR. 3 LINE -->
+						<div class="tp-caption slider-1-cap-line tp-left hide-0-736 sfb tp-resizeme" data-x="720"
+							data-y="600" data-speed="1000" data-start="1250" data-easing="Power3.easeInOut"
+							data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1"
+							style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+							<div class="cap-line"></div>
+						</div>
+						<!-- LAYER NR. 4 -->
+						<div class="tp-caption dark-light-32 fs16-when-0-736 tp-left sfb tp-resizeme" data-x="720"
+							data-y="620" data-speed="900" data-start="1500" data-easing="Power3.easeInOut"
+							data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1"
+							style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">...to create
+							another success story.</div>
+					</div>
+				</li>
+				<!-- SLIDE 3 -->
+				<li data-transition="zoomout" data-slotamount="1" data-masterspeed="1500">
+					<!-- MAIN IMAGE --><img src="{% static 'images/dummy.png' %}" alt="citybg"
+						data-lazyload="{% static 'images/slide_1_3.jpg' %}" data-bgposition="center top"
+						data-bgfit="cover" data-bgrepeat="no-repeat">
+					<!-- LAYERS -->
+					<!-- LAYER NR. 0 BG CAPTIONS -->
+					<div class="tp-caption rs-parallaxlevel-4 zoomout" data-x="left" data-y="center" data-speed="1300"
+						data-start="200" data-easing="Power3.easeInOut" style="z-index: 0;">
+						<div class="slider-bg-white-cap"></div>
+					</div>
+					<!--PARALLAX & OPACITY container -->
+					<div class="rs-parallaxlevel-4 opacity-scroll2">
+						<!-- LAYER NR. 1 -->
+						<div class="tp-caption dark-light-100 tp-left sfb tp-resizeme" data-x="640" data-y="205"
+							data-speed="500" data-start="850" data-easing="Power1.easeInOut" data-splitin="none"
+							data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1"
+							style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">Delivering
+							clarity from </div>
+						<!-- LAYER NR. 2 -->
+						<div class="tp-caption dark-black-100 tp-left sfb tp-resizeme" data-x="650" data-y="275"
+							data-speed="500" data-start="1050" data-easing="Power1.easeInOut" data-splitin="none"
+							data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1"
+							style="z-index: 8; max-width: auto; max-height: auto; white-space: nowrap;">Complexity
+						</div>
+						<!-- LAYER NR. 3 LINE -->
+						<div class="tp-caption slider-1-cap-line tp-left hide-0-736 sfb tp-resizeme" data-x="650"
+							data-y="360" data-speed="1000" data-start="1250" data-easing="Power3.easeInOut"
+							data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1"
+							style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+							<div class="cap-line"></div>
+						</div>
+						<!-- LAYER NR. 4 -->
+						<div class="tp-caption dark-light-32 fs16-when-0-736 tp-left sfb tp-resizeme" data-x="650"
+							data-y="380" data-speed="900" data-start="1500" data-easing="Power3.easeInOut"
+							data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1"
+							style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">Happy clients
+							are our assets.</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- SCROLL ICON -->
+	<div class="local-scroll-cont" id="services">
+		<a href="#services" class="scroll-down smooth-scroll">
+			<div class="icon icon-arrows-down"></div>
+		</a> </div>
+</div>
+<!-- FEATURES 4 -->
+<div class="page-section fes4-cont">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-4 col-md-4">
+				<div class="fes4-box wow fadeIn">
+					<h2 class="section-title">OUR <span class="bold">SERVICES</span></h2>
+					<div class="placeholder"><img src="{% static 'images/services.jpg' %}" style="height:200px;"
+							alt="Services"></div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-4">
+				<div class="fes4-box wow fadeIn" data-wow-delay="200ms">
+					<div class="fes4-title-cont">
+						<div class="fes4-box-icon">
+							<div class="icon icon-basic-bolt"></div>
+						</div>
+						<h3><span class="bold">Web Application Development</span></h3>
+					</div>
+					<div class="content-m"> Our strong web application team is capable to focused on changing the way
+						our clients think about the web. We develop business­ driven, user­ focused, and highly
+						innovative applications.... <a href="{% url 'core:services' 	%}#webap">Learn More...</a> </div>
+				</div>
+				<div class="fes4-box wow fadeIn" data-wow-delay="600ms">
+					<div class="fes4-title-cont">
+						<div class="fes4-box-icon">
+							<div class="icon icon-basic-headset"></div>
+						</div>
+						<h3><span class="bold">VOIP</span></h3>
+					</div>
+					<div class="content-m"> LabGlo involved in the development and design of VoIP solutions in
+						concurrence with the demands of the client enterprise. We are deemed as one among the premier
+						and trusted VoIP ....<a href="{% url 'core:services' %}#voip">Learn More...</a> </div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-4">
+				<div class="fes4-box wow fadeIn" data-wow-delay="400ms">
+					<div class="fes4-title-cont">
+						<div class="fes4-box-icon">
+							<div class="icon icon-basic-smartphone"></div>
+						</div>
+						<h3><span class="bold">Mobility Services</span></h3>
+					</div>
+					<div class="content-m"> We have created mobile apps of any complexity: from award­ winning
+						applications to high end enterprise mobile solutions which automate mission­ critical business
+						processes....<a href="{% url 'core:services' %}#mobser">Learn More...</a> </div>
+				</div>
+				<div class="fes4-box wow fadeIn" data-wow-delay="800ms">
+					<div class="fes4-title-cont">
+						<div class="fes4-box-icon">
+							<div class="icon icon-basic-settings"></div>
+						</div>
+						<h3><span class="bold">DevOps</span></h3>
+					</div>
+					<div class="content-m"> DevOps is neither a tool nor a product. It's an approach to operations. It’s
+						a collective function by the development and operations teams to automate and standardize
+						processes for deployment....
+						<a href="{% url 'core:services' %}#devops">Learn More...</a> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- DIVIDER -->
+<hr class="mt-0 mb-0">
+<!-- CLIENTS 1 & TESTIMONIALS 1 -->
+<div class="page-section p-110-cont">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="mb-50">
+					<h2 class="section-title">OUR <span class="bold">TECHNOLOGIES</span></h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<!-- CLIENTS 1 -->
+			<div class="col-md-12">
+				<div class="row client-row border-bot client-logos">
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Python" src="{% static 'images/a.png' %}">
+					</div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Django" src="{% static 'images/b.png' %}">
+					</div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Flask" src="{% static 'images/flask.png' %}">
+					</div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Firebase"
+							src="{% static 'images/firebase.png' %}"> </div>
+				</div>
+				<div class="row client-row border-bot client-logos">
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Scrapy"
+							src="{% static 'images/scrapy.png' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Kafka" src="{% static 'images/kafka.png' %}">
+					</div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Ros" src="{% static 'images/ros.png' %}">
+					</div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Open CV"
+							src="{% static 'images/opencv.png' %}"> </div>
+				</div>
+				<div class="row client-row border-bot client-logos">
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Numpy" src="{% static 'images/numpy.jpeg' %}">
+					</div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Scipy" src="{% static 'images/scipy.png' %}">
+					</div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="AWS" src="{% static 'images/aws.png' %}">
+					</div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Mysql" src="{% static 'images/mysql.png' %}">
+					</div>
+				</div>
+				<div class="row client-row border-bot client-logos">
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Learn" src="{% static 'images/learn.png' %}">
+					</div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Pandas"
+							src="{% static 'images/pandas.png' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="QT" src="{% static 'images/qt.png' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Matplotlib"
+							src="{% static 'images/matplotlib.png' %}"> </div>
+				</div>
+				<div class="row client-row border-bot client-logos">
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Psql" src="{% static 'images/psql.png' %}">
+					</div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Docker"
+							src="{% static 'images/docker.png' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Selenium"
+							src="{% static 'images/selenium.png' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="AirFlow"
+							src="{% static 'images/airflow.png' %}"> </div>
+				</div>
+
+				<div class="row client-row border-bot client-logos">
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="React JS"
+							src="{% static 'images/react.png' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Angular" src="{% static 'images/d.png' %}">
+					</div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="MongoDB" src="{% static 'images/k.png' %}">
+					</div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Paypal"
+							src="{% static 'images/paypal.png' %}"> </div>
+				</div>
+				<div class="row client-row border-bot client-logos">
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Node JS" src="{% static 'images/i.png' %}">
+					</div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Next JS" src="{% static 'images/next.png' %}">
+					</div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Express"
+							src="{% static 'images/express.png' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Vew JS" src="{% static 'images/vue.jpeg' %}">
+					</div>
+				</div>
+
+				<div class="row client-row border-bot client-logos">
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="WebRtc"
+							src="{% static 'images/webrtc.png' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="D3 JS" src="{% static 'images/n.png' %}">
+					</div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Chart" src="{% static 'images/chart.jpeg' %}">
+					</div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Google Charts"
+							src="{% static 'images/googlecharts.png' %}"> </div>
+					<!-- <div class="col-xs-6 col-sm-3 text-center"> <img alt="Geo Targeting" src="{% static 'images/h.png' %}"> </div> -->
+
+				</div>
+
+				<div class="row client-row border-bot client-logos">
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="HighChart"
+							src="{% static 'images/highcharts.png' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Stripe"
+							src="{% static 'images/stripe.png' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Ionic" src="{% static 'images/ionic.png' %}">
+					</div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Apple" src="{% static 'images/e.png' %}">
+					</div>
+				</div>
+				<div class="row client-row client-logos">
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Android" src="{% static 'images/f.png' %}">
+					</div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="React Native"
+							src="{% static 'images/native.png' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="AppEngine"
+							src="{% static 'images/appengine.png' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Spark" src="{% static 'images/spark.png' %}">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- DIVIDER -->
+<hr class="mt-0 mb-0">
+<!-- FEATURES 1 -->
+<div id="about" class="page-section">
+	<div class="container fes1-cont">
+		<div class="row">
+			<div class="col-xs-12 col-sm-4 col-md-4">
+				<div class="fes4-box wow fadeIn">
+					<h2 class="section-title">WHY <span class="bold">LABGLO</span></h2>
+					<div class="placeholder"><img src="{% static 'images/phone-with-arrow-1.png' %}" alt="img"></div>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-4 col-md-4">
+				<div class="fes1-box wow fadeIn">
+					<div class="fes1-box-icon">
+						<div class="icon icon-basic-mixer2"></div>
+					</div>
+					<h3>Competence</h3>
+					<p>Our team members got outstanding technological expertise to solve our clients' business
+						challenges. </p>
+				</div>
+				<div class="fes1-box wow fadeIn">
+					<div class="fes1-box-icon">
+						<div class="icon icon-basic-case"></div>
+					</div>
+					<h3>Cost Effective</h3>
+					<p>Doing business with us means you are reducing your development cost up to 60%.</p>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-4">
+				<div class="fes1-box wow fadeIn" data-wow-delay="400ms">
+					<div class="fes1-box-icon">
+						<div class="icon icon-basic-spread-text"></div>
+					</div>
+					<h3>Coding Standards</h3>
+					<p>We are delivering bugs free products to our clients; the reason is we are following all the
+						coding standards. </p>
+				</div>
+				<div class="fes1-box wow fadeIn" data-wow-delay="600ms">
+					<div class="fes1-box-icon">
+						<div class="icon icon-basic-mail-open-text"></div>
+					</div>
+					<h3>Communication Strategy</h3>
+					<p>All of our projects are ended in great success because of our top notch communication strategy.
+					</p>
+				</div>
+			</div>
+			<!--<div class="col-md-4 fes1-img-cont wow fadeInUp mb-20"> <img src="images/phone-with-arrow-1.png" alt="img"> </div>-->
+		</div>
+	</div>
+</div>
+<!-- DIVIDER -->
+<hr class="mt-0 mb-0">
+<!-- FEATURES 2 -->
+<div class="page-section">
+	<div class="container-fluid" style="width:1450px;">
+		<div class="row">
+			<div class="col-md-6 wow fadeInLeft equal-height ">
+				<div class="fes2-main-text-cont ">
+					<div class="title-fs-45">WE FOLLOWS
+						<br> <span class="bold">AGILE METHODOLOGY</span> </div>
+					<div class="line-3-70"></div>
+					<div class="fes2-text-cont"> At LabGlo we follow an agile methodology called SCRUM. This works by
+						dividing the development process in sprints of about two weeks. This means along with the
+						development, allowing the client to add any changes that may be needed. This methodology allow
+						us to focus on quality service, while giving the clients flexibility by the opportunity of
+						modifications and changes when needed, and be more involved during the entire development
+						process. </div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="row">
+					<div class="fes2-img equal-height"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- FEATURES 3 -->
+<!-- DIVIDER -->
+<hr class="mt-0 mb-0">
+<!-- PORTFOLIO SECTION 2 -->
+<!-- VIEW MORE PROJECTS  -->
+<!-- END PORTFOLIO SECTION 1 -->
+
+<!-- CLIENTS 1 & TESTIMONIALS 1 -->
+<div class="page-section p-110-cont">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="mb-50">
+					<h2 class="section-title">OUR <span class="bold">CLIENTS</span></h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<!-- CLIENTS 1 -->
+			<div class="col-md-12">
+				<div class="row client-row border-bot client-logos">
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Price"
+							src="{% static 'images/client-logos/price.png' %}"> </div>
+					<!--<div class="col-xs-6 col-sm-3 text-center"> <img alt="UST GLOBAL"
+							src="{% static 'images/client-logos/ust.png' %}"> </div>-->
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Curious Check"
+							src="{% static 'images/client-logos/curiouscheck.png' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Helathywages"
+							src="{% static 'images/client-logos/helathywages.png' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Filampia"
+							src="{% static 'images/client-logos/filampia.png' %}"> </div>
+				</div>
+				<div class="row client-row border-bot client-logos">
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Omp"
+							src="{% static 'images/client-logos/omp.png' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="SUITOPIA"
+							src="{% static 'images/client-logos/f.jpg' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Better Skills"
+							src="{% static 'images/client-logos/betterskills.png' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Neon"
+							src="{% static 'images/client-logos/neon.jpeg' %}"> </div>
+				</div>
+				<div class="row client-row border-bot client-logos">
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Vigyaa"
+							src="{% static 'images/client-logos/vigyaa.png' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Switch Idea"
+							src="{% static 'images/client-logos/switchidea.png' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Stream Insider"
+							src="{% static 'images/client-logos/straminsider.png' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Khelo"
+							src="{% static 'images/client-logos/khelo.png' %}"> </div>
+				</div>
+
+				<div class="row client-row border-bot client-logos">
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="COURSE CENTRO"
+							src="{% static 'images/client-logos/d.jpg' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Strainx"
+							src="{% static 'images/client-logos/strainx.png' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="BOOKON"
+							src="{% static 'images/client-logos/i.jpg' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="PW"
+							src="{% static 'images/client-logos/b.jpg' %}"> </div>
+				</div>
+				<div class="row client-row client-logos border-bot">
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Tech Bridge"
+							src="{% static 'images/client-logos/e.jpg' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Class Management"
+							src="{% static 'images/client-logos/g.jpg' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Hubster"
+							src="{% static 'images/client-logos/h.jpg' %}"> </div>
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="Ticker Face"
+							src="{% static 'images/client-logos/tickerface.png' %}"> </div>
+
+				</div>
+				<div class="row client-row client-logos">
+					<div class="col-xs-6 col-sm-3 text-center"> <img alt="NEELTECH"
+							src="{% static 'images/client-logos/c.jpg' %}"> </div>
+				</div>
+			</div>
+		</div>
+		<!-- TESTIMONIALS 1 -->
+	</div>
+</div>
+</div>
+
+<div class="page-section ">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="mb-50">
+					<h2 class="section-title">OUR <span class="bold">European partners</span></h2>
+				</div>
+			</div>
+		</div>
+		<div class="row" style="margin-bottom: 70px;">
+			<div class="col-xs-12 col-sm-3 col-md-3">
+				<div class="fes4-box wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+
+					<div class="placeholder"><img src="{% static 'images/client-logos/veganhuts.png' %}" alt="VeganHit">
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-xs-12 col-sm-8 col-md-8">
+				<div class=" wow fadeIn" data-wow-delay="400ms"
+					style="visibility: visible; animation-delay: 400ms; animation-name: fadeIn;margin-top: 40px;">
+
+
+					<p>Tminus-AI Ltd - Theveganhut, UK are our esteemed partners in business and technology. We share
+						the same vision of future technologies, Artificial Intelligence and Machine Learning to redefine
+						people's life and serve international clients as One. Our domains are Food and Supply Chain, but
+						not limited to it. </p>
+				</div>
+
+			</div>
+			<!--<div class="col-md-4 fes1-img-cont wow fadeInUp mb-20"> <img src="images/phone-with-arrow-1.png" alt="img"> </div>-->
+		</div>
+	</div>
+</div>
+<!-- WORK PROCESS 1 -->
+<div class="page-section ">
+	<div class="work-proc-1-bg">
+		<div class="container fes4-cont">
+			<div class="row">
+				<div class="col-md-2 ">
+					<div class="mb-50">
+						<h2 class="section-title">OUR <span class="bold">PROCESS</span></h2>
+					</div>
+				</div>
+				<div class="col-md-10">
+					<div class="row">
+						<div class="col-xs-12 col-sm-4 col-md-4">
+							<div class="fes4-box">
+								<div class="fes4-title-cont">
+									<div class="fes4-box-icon">
+										<div class="icon icon-basic-message-multiple"></div>
+									</div>
+									<h3><span class="bold">MEETUP </span></h3>
+									<p>We work together with the client closely to understand the issues and
+										possibilities.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-4">
+							<div class="fes4-box">
+								<div class="fes4-title-cont">
+									<div class="fes4-box-icon">
+										<div class="icon icon-basic-lightbulb"></div>
+									</div>
+									<h3><span class="bold">PLANNING & PROTOTYPING </span></h3>
+									<p>Our user experience road map planning helps the client’s business objectives,
+										with a focus on good design architecture and meaningful measurement.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-4">
+							<div class="fes4-box">
+								<div class="fes4-title-cont">
+									<div class="fes4-box-icon">
+										<div class="icon icon-basic-gear"></div>
+									</div>
+									<h3><span class="bold">DEVELOPMENT</span></h3>
+									<p>In this stage, both the design and development teams go full-steam, creating the
+										visual and functional aspects of the application using leading-edge
+										technologies.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-4 col-md-4">
+							<div class="fes4-box">
+								<div class="fes4-title-cont">
+									<div class="fes4-box-icon">
+										<div class="icon icon-basic-laptop"></div>
+									</div>
+									<h3><span class="bold">Testing and QA</span></h3>
+									<p>We continuously validate the functionality and user experience of the
+										applications by testing our code, designs and assumptions.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-4">
+							<div class="fes4-box">
+								<div class="fes4-title-cont">
+									<div class="fes4-box-icon">
+										<div class="icon icon-basic-paperplane"></div>
+									</div>
+									<h3><span class="bold">Delivery</span></h3>
+									<p>A project is considered to be successful, when our clients are satisfied with the
+										results. We are committed to deliver all the projects on time, on budget and
+										with the functionality required.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- ABOUT US 2 -->
+
+<!-- VIEW MORE PROJECTS  -->
+<!-- COUNTERS 1 -->
+
+<!-- DIVIDER -->
+<hr class="mt-0 mb-0">
+<!-- ADS 1 -->
+<!-- ADS 2 -->
+
+<!-- VIDEO ADS 1 -->
+
+<!-- BLOG 1 -->
+<div class="page-section pt-110-b-30-cont">
+	<div class="container">
+		<div class="mb-50">
+			<h2 class="section-title pr-0">LATEST <span class="bold">NEWS</span></h2>
+		</div>
+		<div class="row">
+			{% for itm in news_post %}
+			<!-- Post Item 1 -->
+			<div class="col-sm-6 col-md-4 col-lg-4 wow fadeIn pb-70">
+				<div class="post-prev-img">
+					<a href="{% url 'news:news_details' itm.slug %}"><img src="{{ itm.image_url}}" alt="img"> </a>
+				</div>
+				<div class="post-prev-title">
+					<h3><a href="{% url 'news:news_details' itm.slug %}">{{ itm.title|truncatechars:'40' }}</a></h3>
+				</div>
+				<div class="post-prev-info">{{ itm.created_on }}</div>
+				<div class="post-prev-text"> {{ itm.description|safe|truncatechars:'190'}}</div>
+				<div class="post-prev-more-cont clearfix">
+					<div class="post-prev-more left">
+						<a href="{% url 'news:news_details' itm.slug %}" class="blog-more">READ MORE</a>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+</div>
+<!-- NEWS LETTER -->
+
+{% endblock %}

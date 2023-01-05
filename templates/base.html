@@ -1,0 +1,507 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    {% block title %} {% endblock %}
+    <meta charset=utf-8>
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta name="robot" content="index, follow">
+    <meta name="keywords" content="LabGlo Technologies LLP, Labglo, Django company in kerala,
+    Django Python Development , Custom Web development, Data analytics, Data mining,
+    Top 10 company in India, Top 10 company in Australia, Top 10 company in US,
+    Top 10 company in Singapore,  Top 10 Django company in India,
+    Top 10 Django company in Australia, Top 10 Django company US,
+    Top 10 Django company in Singapore, Top Python company in India,
+    Top Python company in Australia, Top Python company in US,
+    Top Python company in Singapore, Top Django company in India,
+    Top Django company in Australia, Top Django company in US,
+    Top Django company in Singapore, Top Django developers,
+    Top Django developers in India, Top Django developers in Australia,
+    Top Django developers in US, Top Django developers in Singapore,
+    Top 10 Django developers in India, Top 10 Django developers in Australia,
+    Top 10 Django developers in US, Top 10 Django developers in Singapore,
+    Top 10 Django developers in Kerala, Top Django developers in Kerala,
+    Jayapal D, Jayapal Dharmamani, Information Technology Services,
+    Software Product Development, Enterprise Applications,
+    Full Stack Django Developer, Full stack Django Web Development, Python,
+    Django, Pip, Linux, S3, AWS" />
+    <meta name="copyright" content="www.labglo.com">
+    <meta name="author" content="www.labglo.com">
+    <meta name="language" content="English">
+    <meta name="description" content="Leading web and mobile application development company that focuses on full stack Python Django web app development with offices in the India and Australia." />
+    <meta property="og:image" content="https://labglo.com/static/images/logo-og-image.jpg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+    <!-- CSS -->
+    <!-- REVOSLIDER CSS SETTINGS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/settings.min.css' %}" media="screen" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700%7COpen+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <!--  BOOTSTRAP -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- ICONS ELEGANT FONT & FONT AWESOME & LINEA ICONS  -->
+    <link rel="stylesheet" href="{% static 'css/icons-fonts.css' %}">
+    <!--  CSS THEME -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- ANIMATE -->
+    <link rel='stylesheet' href="{% static 'css/animate.min.css' %}">
+    <link rel='stylesheet' href="{% static 'css/jquery.json-viewer.css' %}">
+    <!-- IE Warning CSS -->
+    <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/ie-warning.css" ><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/ie8-fix.css" ><![endif]-->
+    <!-- Magnific popup  in style.css   Owl Carousel Assets in style.css -->
+    <!-- CSS end -->
+    <!-- JS begin some js files in bottom of file-->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+        <![endif]-->
+    <!-- Modernizr -->
+    <!-- <script src="js/modernizr.js"></script> -->
+
+    <!-- reCaptch Script -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body>
+    <!-- LOADER -->
+    <div id="loader-overflow">
+        <div id="spin-loader">Please enable JS</div>
+</div>
+    <div id="wrap" class="boxed ">
+        <div class="grey-bg">
+            <!-- HEADER -->
+            <header id="nav" class="header header-1 no-transparent mobile-no-transparent">
+                <div class="header-wrapper">
+                    <div class="container-m-30 clearfix">
+                        <div class="logo-row">
+                            <!-- LOGO -->
+                            <div class="logo-container-2">
+                                <a href="{% url 'core:home' %}">
+                                    <div class="logo-2"> <img src="{% static 'images/logo.png' %}" class="logo-img" alt="Logo"> </div>
+                                </a>                            </div>
+                            <!-- BUTTON -->
+                            <div class="menu-btn-respons-container">
+                                <button type="button" class="navbar-toggle btn-navbar collapsed" data-toggle="collapse" data-target="#main-menu .navbar-collapse"> <span aria-hidden="true" class="hamb-mob-icon"><i class="fa fa-bars" aria-hidden="true"></i></span> </button>
+                          </div>
+                        </div>
+                    </div>
+                    <!-- MAIN MENU CONTAINER -->
+                    <div class="main-menu-container">
+                        <div class="container-m-30 clearfix">
+                            <!-- MAIN MENU -->
+                            <div id="main-menu">
+                                <div class="navbar navbar-default" role="navigation">
+                                    <!-- MAIN MENU LIST -->
+                                    <nav class="collapse collapsing navbar-collapse right-1024">
+                                        <ul class="cd-header-buttons">
+                                            <!-- <li><a class="cd-search-trigger" href="#cd-search"><span></span></a> </li> -->
+                                            <li><a class="cd-email-trigger" href="{% url 'core:contact' %}"><i class="fa fa-envelope"></i>
+</a> </li>
+                                            <li><a class="cd-skype-trigger" href="#cd-skype"><script type="text/javascript" src="{% static 'js/skype-uri.js' %}"></script>
+<div id="SkypeButton_Call_jayapal.dharmamani_1">
+  <script type="text/javascript">
+    Skype.ui({
+      "name": "dropdown",
+      "element": "SkypeButton_Call_jayapal.dharmamani_1",
+      "participants": ["jayapal.dharmamani"],
+      "imageSize": 24
+    });
+  </script>
+</div>
+</a> </li>
+                                        </ul>
+                                  <ul class="nav navbar-nav">
+                                            <!-- MENU ITEM -->
+                                            <li class="parent">
+                                                <a href="{% url 'core:home' %}">
+                                                    <div class="main-menu-title">HOME</div>
+                                                </a>                                            </li>
+                                            <!-- MENU ITEM -->
+                                            <li class="parent">
+                                                <a href="{% url 'core:about_us'%}">
+                                                    <div class="main-menu-title">ABOUT US</div>
+                                                </a>
+                                                <ul class="sub">
+                                                    <li class=""> <a href="{% url 'core:about_us'%}#labglo">LabGlo</a> </li>
+                                                    <li><a href="{% url 'core:about_us'%}#key" id="keylink">Key People</a> </li>
+                                                    <li class=""><a href="{% url 'core:about_us'%}#tech" >Technologies</a> </li>
+                                                    <!-- <li class=""><a href="#" >Portfolio</a></li> -->
+                                                    <li class=""><a href="{% url 'core:about_us'%}#client" >Clients and Partners</a> </li>
+                                                    <!-- <li class=""><a href="#" >Our Process</a></li> -->
+                                                    <li class=""><a href="{% url 'core:about_us'%}#social">Social Responsibility</a> </li>
+                                                </ul>
+                                            </li>
+                                            <!-- MENU ITEM -->
+                                            <li class="parent">
+                                                <a href="{% url 'core:services'%}">
+                                                    <div class="main-menu-title">SERVICES</div>
+                                                </a>
+                                                <ul class="sub">
+                                                    <li class=""><a href="{% url 'core:services'%}#webap">Web Application Development</a> </li>
+                                                    <li class=""><a href="{% url 'core:services'%}#mobser">Mobility Services</a> </li>
+                                                    <li class=""><a href="{% url 'core:services'%}#voip">VOIP</a> </li>
+                                                    <li class=""><a href="{% url 'core:services'%}#devops">DevOps</a> </li>
+                                                </ul>
+                                            </li>
+                                            <!-- MENU ITEM -->
+                                            <li class="parent">
+                                                <a href="{% url 'career:jobs_list' %}">
+                                                    <div class="main-menu-title">CAREERS</div>
+                                                </a>
+                                                <ul class="sub">
+                                                    <li><a href="{% url 'career:jobs_list' %}#currentjob" >Current Openings</a> </li>
+                                                    <li class=""> <a href="{% url 'career:jobs_list' %}#lifeat">Life @ LabGlo</a> </li>
+                                                    <li class=""> <a href="{% url 'career:drive_home' %}">Placement Drives</a> </li>
+                                                </ul>
+                                            </li>
+                                            <!-- MENU ITEM -->
+                                            <li class="parent">
+                                                <a href="{% url 'news:home' %}">
+                                                    <div class="main-menu-title">NEWS ROOM</div>
+                                                </a>
+                                                <ul class="sub">
+                                                    <!-- <li class=""> <a href="https://blog.labglo.com">Blog </a> </li> -->
+                                                    <li><a href="{% url 'news:home' %}">Events</a> </li>
+                                                    <li><a href="{% url 'core:gallery' %}">Gallery</a> </li>
+                                                    <li><a href="{% url 'blog:blog_home' %}">Blog</a> </li>
+                                                </ul>
+                                            </li>
+                                            <li class="parent">
+                                                <a href="#">
+                                                    <div class="main-menu-title">TOOLS</div>
+                                                </a>
+                                                <ul class="sub">
+                                                    <li><a href="{% url 'core:url_encode_decode'%}">URL Encode Decode</a></li>
+                                                    <li><a href="{% url 'core:product_crawl'%}">Product Crawl</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="parent">
+                                                <a href="{% url 'core:contact' %}">
+                                                    <div class="main-menu-title">CONTACT US</div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                          </div>
+                            <!-- END main-menu -->
+                        </div>
+                        <!-- END container-m-30 -->
+                    </div>
+                    <!-- END main-menu-container -->
+                    <!-- SEARCH READ DOCUMENTATION -->
+
+                    <!-- cd-header-buttons -->
+                    <div id="cd-search" class="cd-search">
+                        <form class="form-search" id="searchForm" action="#" method="get">
+                            <input type="text" value="" name="q" id="q" placeholder="Search..."> </form>
+                    </div>
+                </div>
+              <!-- END header-wrapper -->
+            </header>
+
+
+            {% block content %}{% endblock %}
+
+
+            <!-- FOOTER 2 -->
+            <footer id="footer2" class="page-section pt-80 pb-50">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3 widget">
+                            <div class="logo-footer-cont">
+                                <a href="{% url 'core:home' %}"> <img class="logo-footer" src="{% static 'images/logo-footer.png' %}" alt="logo"> </a>                           </div>
+                            <div class="footer-2-text-cont"> <address>
+
+                    LabGlo, <br>Module 2209, 2nd Floor, Yamuna, <br>Technopark Phase III, Sez Campus,<br>Trivandrum 695581, <br>Kerala,  India.
+
+                  </address> </div>
+                            <div class="footer-2-text-cont"><i class="fa fa-phone"></i> +91 471 4000543
+                                <br><i class="fa fa-envelope"></i> <a class="a-text" href="mailto:info@LABGLO.com">info@labglo.com</a> </div>
+                            <!-- <div class="footer-2-text-cont"> <i class="fa fa-envelope"></i> <a class="a-text" href="mailto:info@LABGLO.com">info@labglo.com</a> </div> -->
+                        </div>
+                  <div class="col-md-3 col-sm-3 widget">
+                            <h4>SERVICES</h4>
+                            <ul class="links-list a-text-cont">
+                                <li class=""> <a href="{% url 'core:services'%}#webap">Web Application Development</a> </li>
+                                                    <li><a href="{% url 'core:services'%}#mobser">Mobility Services</a> </li>
+                                                    <li class=""><a href="{% url 'core:services'%}#voip">VOIP</a> </li>
+                                                    <li class=""><a href="{% url 'core:services'%}#devops">DevOps</a> </li>
+                            </ul>
+                        </div>
+                  <div class="col-md-3 col-sm-3 widget">
+                            <h4>ABOUT US</h4>
+                            <ul class="links-list a-text-cont">
+                                <li class=""> <a href="{% url 'core:about_us'%}#labglo">LabGlo</a> </li>
+                                                    <li><a href="{% url 'core:about_us'%}#key" id="keylink">Key People</a> </li>
+                                                    <li class=""><a href="{% url 'core:about_us'%}#tech" >Technologies</a> </li>
+                                                    <!-- <li class=""><a href="#" >Portfolio</a></li> -->
+                                                    <li class=""><a href="{% url 'core:about_us'%}#client" >Clients and Partners</a> </li>
+                                                    <!-- <li class=""><a href="#" >Our Process</a></li> -->
+                                                    <li class=""><a href="{% url 'core:about_us'%}#social">Social Responsibility</a> </li>
+                            </ul>
+                        </div>
+                 <div class="col-md-3 col-sm-3 widget">
+                            <h4>RECENT POSTS</h4>
+                            <div id="post-list-footer">
+                                {% for itm in news_post %}
+                                    <div class="post-prev-title">
+                                        <h3><a class="a-text"  href="{% url 'news:news_details' itm.slug %}">{{ itm.title|truncatechars:'100' }}</a></h3>
+                                    </div>
+                                    <div class="post-prev-info"> {{ itm.created_on }} </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                  </div>
+                    <div class="footer-2-copy-cont clearfix">
+                        <!-- Social Links -->
+                        <div class="footer-2-soc-a right">
+                            <a href="https://www.facebook.com/labglo" title="Facebook" target="_blank"><img src="{% static 'images/fb.png' %}" alt="Facebook"> </a>
+                            <a href="https://twitter.com/labglotech" title="Twitter" target="_blank"><img src="{% static 'images/tw.png' %}" alt="Twitter"> </a>
+                            <a href="https://www.pinterest.com/labglo/" title="pinterest" target="_blank"><img src="{% static 'images/pin.png' %}" alt="Pinterest"> </a>
+                            <a href="https://www.linkedin.com/company/labglo" title="LinkedIn+" target="_blank"><img src="{% static 'images/li.png' %}" alt="LinkedIn"> </a>
+                            <a href="https://plus.google.com/102838373585456330318" title="google" target="_blank"><img src="{% static 'images/gp.png' %}" alt="Google+"> </a>
+                            <a href="https://www.reddit.com/user/labglo/" title="reddit" target="_blank"><img src="{% static 'images/reddit.png' %}" alt="Reddit"> </a>
+                            <a href="https://www.xing.com/companies/labglo" title="reddit" target="_blank"><img src="{% static 'images/xing.png' %}" alt="Xing"> </a>
+                        </div>
+                        <!-- Copyright -->
+                        <div class="left"> <a class="footer-2-copy" href="#" target="_blank">&copy; LABGLO 2015</a> </div>
+                    </div>
+                </div>
+          </footer>
+            <!-- BACK TO TOP -->
+            <p id="back-top"> <a href="#top" title="Back to Top"><span class="icon icon-arrows-up"></span></a> </p>
+        </div>
+        <!-- End BG -->
+    </div>
+    <!-- End wrap -->
+    <!-- JS begin -->
+    <!-- jQuery  -->
+    <script type="text/javascript" src="{% static 'js/jquery-1.11.2.min.js' %}"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- MAGNIFIC POPUP -->
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <!-- PORTFOLIO SCRIPTS -->
+    <script type="text/javascript" src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/masonry.pkgd.min.js' %}"></script>
+    <!-- COUNTER -->
+    <script type="text/javascript" src="{% static 'js/jquery.countTo.js' %}"></script>
+    <!-- APPEAR -->
+    <script type="text/javascript" src="{% static 'js/jquery.appear.js' %}"></script>
+    <!-- OWL CAROUSEL -->
+    <script type="text/javascript" src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/classie.js' %}"></script>
+    <!-- MAIN SCRIPT -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <!-- REVOSLIDER SCRIPTS  -->
+    <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+    <script type="text/javascript" src="{% static 'js/jquery.themepunch.tools.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.themepunch.revolution-parallax.min.js' %}"></script>
+
+    <!-- GOOLE MAP -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsKn0lVR7nBu4nKZQTLXXeSo91GE1vwlM&libraries=places&sensor=false&amp;language=en"></script>
+
+    <script type="text/javascript" src="{% static 'js/gmap3.min.js' %}"></script>
+
+    <!-- FORMS VALIDATION   -->
+    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
+    <!-- <script src="{% static 'js/contact-form-validation.min.js' %]"></script>      -->
+    <script type="text/javascript" src="{% static 'js/jquery.json-viewer.js' %}"></script>
+
+    <script>
+        $(window).load(function(){
+            function goToByScroll(id){
+          // Reove "link" from the ID
+        id = id.replace("link", "");
+          // Scroll
+        $('html,body').animate({
+            scrollTop: $("#"+id).offset().top},
+            'slow');
+    }
+
+    $(".scrolltop > li > a").click(function(e) {
+          // Prevent a page reload when a link is pressed
+        e.preventDefault();
+          // Call the scroll function
+        goToByScroll($(this).attr("id"));
+    });
+     });
+    </script>
+
+<!-- NAVBAR HIGHLIGHT DYNAMICALLY
+    <script type="text/javascript">
+        $('ul.navbar-nav li').click(function(e){
+            $('.nav li.parent current').removeClass('parent current');
+            var $this = $(this);
+            if (!$this.hasClass('parent current')) {
+                $this.addClass('parent current');
+            }
+            e.preventDefault();
+        })
+    </script>
+-->
+    <!-- SLIDER REVOLUTION INIT  -->
+    <script type="text/javascript">
+    function init() {
+        window.addEventListener('scroll', function(e){
+            var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                shrinkOn = 300,
+                header = document.querySelector("header");
+            if (distanceY > shrinkOn) {
+                classie.add(header,"smaller");
+            } else {
+                if (classie.has(header,"smaller")) {
+                    classie.remove(header,"smaller");
+                }
+            }
+        });
+    }
+    window.onload = init();
+        jQuery(document).ready(function() {
+            if ((navigator.appVersion.indexOf("Win") != -1) && (ieDetect == false)) {
+                jQuery('#rs-fullscr').revolution({
+                    dottedOverlay: "none",
+                    delay: 3000,
+                    startwidth: 1170,
+                    startheight: 700,
+                    hideThumbs: 200,
+                    thumbWidth: 100,
+                    thumbHeight: 50,
+                    thumbAmount: 5,
+                    //fullScreenAlignForce: "off",
+                    navigationType: "none",
+                    navigationArrows: "solo",
+                    navigationStyle: "preview4",
+                    hideTimerBar: "on",
+                    touchenabled: "on",
+                    onHoverStop: "on",
+                    swipe_velocity: 0.7,
+                    swipe_min_touches: 1,
+                    swipe_max_touches: 1,
+                    drag_block_vertical: false,
+                    parallax: "scroll",
+                    parallaxBgFreeze: "on",
+                    parallaxLevels: [45, 40, 35, 50],
+                    parallaxDisableOnMobile: "on",
+                    keyboardNavigation: "off",
+                    navigationHAlign: "center",
+                    navigationVAlign: "bottom",
+                    navigationHOffset: 0,
+                    navigationVOffset: 20,
+                    soloArrowLeftHalign: "left",
+                    soloArrowLeftValign: "center",
+                    soloArrowLeftHOffset: 20,
+                    soloArrowLeftVOffset: 0,
+                    soloArrowRightHalign: "right",
+                    soloArrowRightValign: "center",
+                    soloArrowRightHOffset: 20,
+                    soloArrowRightVOffset: 0,
+                    shadow: 0,
+                    fullWidth: "off",
+                    fullScreen: "on",
+                    spinner: "spinner4",
+                    stopLoop: "off",
+                    stopAfterLoops: -1,
+                    stopAtSlide: -1,
+                    shuffle: "off",
+                    autoHeight: "off",
+                    forceFullWidth: "off",
+                    hideThumbsOnMobile: "off",
+                    hideNavDelayOnMobile: 1500,
+                    hideBulletsOnMobile: "off",
+                    hideArrowsOnMobile: "off",
+                    hideThumbsUnderResolution: 0,
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    startWithSlide: 0,
+                    //fullScreenOffsetContainer: ""
+                });
+            } else {
+                jQuery('#rs-fullscr').revolution({
+                    dottedOverlay: "none",
+                    delay: 3000,
+                    startwidth: 1170,
+                    startheight: 700,
+                    hideThumbs: 200,
+                    thumbWidth: 100,
+                    thumbHeight: 50,
+                    thumbAmount: 5,
+                    navigationType: "none",
+                    navigationArrows: "solo",
+                    navigationStyle: "preview4",
+                    hideTimerBar: "on",
+                    touchenabled: "on",
+                    onHoverStop: "on",
+                    swipe_velocity: 0.7,
+                    swipe_min_touches: 1,
+                    swipe_max_touches: 1,
+                    drag_block_vertical: false,
+                    parallax: "mouse",
+                    parallaxBgFreeze: "on",
+                    parallaxLevels: [0],
+                    parallaxDisableOnMobile: "on",
+                    keyboardNavigation: "off",
+                    navigationHAlign: "center",
+                    navigationVAlign: "bottom",
+                    navigationHOffset: 0,
+                    navigationVOffset: 20,
+                    soloArrowLeftHalign: "left",
+                    soloArrowLeftValign: "center",
+                    soloArrowLeftHOffset: 20,
+                    soloArrowLeftVOffset: 0,
+                    soloArrowRightHalign: "right",
+                    soloArrowRightValign: "center",
+                    soloArrowRightHOffset: 20,
+                    soloArrowRightVOffset: 0,
+                    shadow: 0,
+                    fullWidth: "off",
+                    fullScreen: "on",
+                    spinner: "spinner4",
+                    stopLoop: "off",
+                    stopAfterLoops: -1,
+                    stopAtSlide: -1,
+                    shuffle: "off",
+                    autoHeight: "off",
+                    forceFullWidth: "off",
+                    hideThumbsOnMobile: "off",
+                    hideNavDelayOnMobile: 1500,
+                    hideBulletsOnMobile: "off",
+                    hideArrowsOnMobile: "off",
+                    hideThumbsUnderResolution: 0,
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    startWithSlide: 0,
+                });
+            }
+        }); //ready
+
+    </script>
+    <!-- JS end -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-90769655-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    {% block footer %}
+    {% endblock %}
+</body>
+
+</html>

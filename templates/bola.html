@@ -1,0 +1,62 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    <title>LabGlo : Demo</title>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="page-title-large page-title-img grey-dark-bg pt-250" >
+    <div class="relative container align-left">
+        <div class="row">
+            <div class="col-md-0">
+                <h1 class="page-title"> Demo </h1>
+            </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- COTENT CONTAINER -->
+<div class="container p-140-cont">
+    <div class="row">
+        <!-- CONTENT -->
+        <div class="col-md-5">
+
+                    <!--<span class="bread-current">-->
+                         <form method="post" action="">
+                             {% csrf_token %}
+                    <input type="url"  placeholder="URL"  name="url" style="margin-right:25px; width:100%; max-width:300px;">
+                    <input type="text" placeholder="COUNTRY" name="country"><br>
+                             <input type="text" placeholder="Device" name="ua" ><br>
+                    <input type="submit" value="Submit" class="button medium gray">
+                       </form>
+            {% if redirect_urls %}
+            {% for url in redirect_urls%}
+            <p> {{ forloop.counter }} | {{ url }} </p>
+            {% endfor %}
+            {% endif %}
+                    <!--</span>-->
+                </div>
+        <!--<div class="col-sm-8 blog-main-posts" style="margin-top:30px;">-->
+
+                <!--<div class="blog-post wow fadeIn pb-50">-->
+                    <!--{% if form %}-->
+                        <!--<p>Here is your url<a href=" {{ form }}" target ="_blank"> {{ form }}</a></p>-->
+                    <!--{% endif %}-->
+                <!--</div>-->
+
+        <!--</div>-->
+    </div>
+</div>
+
+{% endblock %}
+
+
+

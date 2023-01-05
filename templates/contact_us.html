@@ -1,0 +1,244 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+{% crispy form %}
+
+{% block title %}
+    <title>LabGlo : Contact Us</title>
+{% endblock %}
+
+{% block content %}
+  <!-- PAGE TITLE -->
+  <div class="page-title-cont page-title-large page-title-img grey-dark-bg pt-250" style="background-image: url(/static/images/work-proc-bg.jpg)">
+    <div class="relative container align-left">
+      <div class="row">
+
+        <div class="col-md-8">
+          <h1 class="page-title">CONTACT</h1>
+          <div class="page-sub-title">
+
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="breadcrumbs">
+            <a href="{% url 'core:home' %}">Home</a><span class="slash-divider">/</span><span class="bread-current">CONTACT</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+   <div id="contact-link" class="page-section p-110-cont grey-light-bg">
+      <div class="container">
+        <div class="row">
+        	<div class="col-md-4 col-sm-6">
+            <div class="cis-cont">
+              <div class="cis-icon">
+                <div class="icon icon-basic-geolocalize-05"></div>
+              </div>
+              <div class="cis-text">
+                <h3><span class="bold">LABGLO, INDIA</span></h3>
+                <p>Module 2209, 2nd Floor, Yamuna, <br>Technopark Phase III, Sez Campus, <br>Trivandrum, <br>Kerala 695581.</p>
+  	  <p> <p><img class="adjust_one" alt="Labglo India" src="{% static 'images/lab.png' %}" ></p><!--<a href="mailto:info@labglo.com"> <i class="fa fa-envelope"></i> info@labglo.com</a></p>
+  	  <p><i class="fa fa-phone"></i> +91 471 4000543</p>-->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="cis-cont">
+              <div class="cis-icon">
+                <div class="icon icon-basic-geolocalize-05"></div>
+              </div>
+              <div class="cis-text">
+                <h3><span class="bold">LABGLO, AUSTRALIA</span></h3>
+                <p>  136 Albert Rd, <br>  South Melbourne,<br>  Victoria 3205</p>
+  	  <p><img class="adjust" alt="Labglo Australia" src="{% static 'images/dv.png' %}" ></p><!--<i class="fa fa-envelope"></i> dvlahos@labglo.com</a></p>
+  	  <p><i class="fa fa-phone"></i> +61 3 8692 5820</p>
+  	  <p><i class="fa fa-phone"></i> +61 412 405 489</p>-->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+            <div class="cis-cont">
+              <div class="cis-icon">
+                <div class="icon icon-basic-message-multiple"></div>
+              </div>
+              <div class="cis-text">
+                <h3><span class="bold">ENQUIRY</span></h3>
+                <p><img class="adjust_two" alt="Enquiry" src="{% static 'images/infor.png' %}" ></p>
+                <!--<p><a href="mailto:info@labglo.com"><i class="fa fa-envelope"></i> info@labglo.com</a></p>
+  	  <p><i class="fa fa-phone"></i> +91 471 4000543</p>-->
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <!-- GOOGLE MAP & CONTACT FORM -->
+    <div class="page-section">
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-md-6">
+            <div class="row" style="margin-right:-10px;">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.4938648692732!2d76.87669691478317!3d8.548416193855164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bef2dd12ae0f%3A0x359098ef5304fecc!2sTechnopark+Phase+-+III!5e0!3m2!1sen!2sin!4v1477460408005" width="100%" height="540" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+           <div class="row" style="margin-left:-10px;">
+  		        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.033980659444!2d144.9673381515033!3d-37.836090342996016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6680300f75e89%3A0xaeabb9f9f457a7b0!2s136+Albert+Rd%2C+South+Melbourne+VIC+3205%2C+Australia!5e0!3m2!1sen!2sin!4v1489731296606" width="100%" height="540" frameborder="0" style="border:0" allowfullscreen></iframe>
+              <!-- TITLE -->
+
+
+              <!-- CONTACT FORM -->
+
+            </div>
+  	</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- DIVIDER -->
+    <hr class="mt-0 mb-0">
+
+    <!-- CONTACT INFO SECTION 1 -->
+
+    <!-- CLIENTS 1 & TESTIMONIALS 1 -->
+    <div class="page-section pt-110-b-80-cont">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+
+              <!-- CONTACT FORM -->
+              <div class="">
+                <!-- success Text -->
+                <div class="col-md-12" id="id_success_div">
+                  <div class="text-center">
+                    <span id="id_success_txt"></span>
+                  </div>
+                </div>
+                <form method="POST" id="contact_form" novalidate="novalidate" accept-charset="utf-8">
+                  {% csrf_token %}
+
+                  <div class="row">
+                    
+                    <!-- First Row -->
+                    <div class="col-md-6">
+                      <div class="row">
+
+                        <div class="col-md-12 mb-30">
+                          {{ form.name }}
+                          <div id="name" class="errors"></div>
+                        </div>
+
+                        <div class="col-md-12 mb-23">
+                          {{ form.message }}
+                          <div id="message" class="errors"></div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <!-- Second Row -->
+                    <div class="col-md-6">
+                      <div class="row">
+
+                        <div class="col-md-12 mb-60">
+                          {{ form.phone }}
+                          <div id="phone" class="errors"></div>
+                        </div>
+
+                        <div class="col-md-12 mb-23">
+                          {{ form.email }}
+                          <div id="email" class="errors"></div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <!-- reCaptch and Submit Button -->
+                    <div class="col-md-6">
+                      <div class="text-left">
+                        <div class="g-recaptcha" data-sitekey="{{ RECAPTCHA_PUBLIC_KEY }}" data-theme="dark"></div>
+                        <div id="__all__" class="errors"></div>
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <div class="text-left">
+                        <button type="submit" class="button medium gray" id="contact_submit"><img src="{% static 'images/loader.svg' %}" alt="Loader" id="id_loader" style="display:none;"> Submit</button>
+                      </div>
+                    </div>
+
+                </div>
+
+                </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- NEWS LETTER -->
+  <div class="divider divider-center"><i class="fa fa-circle"></i></div>
+
+{% endblock %}
+
+{% block footer %}
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#id_success_div").hide();
+    });
+    $(document).on('submit', '#contact_form', function(event){
+      event.preventDefault();
+      $("#id_loader").show();
+      var csrftoken = '{{ csrf_token }}';
+      $.ajax({
+        url: '/contact/',
+        headers:{
+            'X-CSRFToken': csrftoken,
+        },
+        data:{
+          'name': $('#id_name').val(),
+          'phone': $('#id_phone').val(),
+          'email': $('#id_email').val(),
+          'message': $('#id_message').val(),
+          'g-recaptcha-response': $("#g-recaptcha-response").val(),
+        },
+        type: 'POST',
+        success: function(json){
+            if (json['status']){
+                $("#id_success_txt").empty();
+                $("#id_success_txt").append(json['status']);
+                $("#id_success_div").show();
+                setTimeout(function(){
+                  $("#id_success_div").hide();
+                }, 5000)
+                $(".errors").empty();
+                $("#contact_form")[0].reset();
+                grecaptcha.reset();
+            }else {
+                var err_count = Object.keys(json['foo']).length;
+                $(".errors").empty();
+                if(err_count>0){
+                    $.each( json['foo'], function( key, value ) {
+                        $("#"+key).text(value);
+                      // alert( key + ": " + value );
+                    });
+                }
+            }
+            $("#id_loader").hide();
+        },
+      });
+    });
+
+</script>
+{% endblock %}

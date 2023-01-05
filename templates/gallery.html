@@ -1,0 +1,679 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    <title>LabGlo : Gallery</title>
+{% endblock %}
+
+{% block content %}
+
+<!-- PAGE TITLE SMALL -->
+          <div class="page-title-cont page-title-large page-title-img grey-dark-bg pt-250" style="background-image: url(/static/images/gallery-img.jpg)">
+          <div class="relative container align-left">
+            <div class="row">
+              
+              <div class="col-md-8">
+                <h1 class="page-title">Our Gallery</h1>
+              </div>
+              
+              <div class="col-md-4">
+                <div class="breadcrumbs">
+                  <a href="{% url 'core:home' %}">Home</a>/</span><span class="bread-current">Gallery</span>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+        <!-- COTENT CONTAINER -->
+        <div class="container p-140-cont">
+          <div class="row">
+          
+              <!-- CONTENT -->
+
+              <div class="col-sm-6">
+                <div class="lightbox-item popup-gallery mb-30">
+                  <a href="{% static 'images/gallery/dj/DSC_0153.jpg' %}">
+                    <div class="port-img-overlay">
+                      <img class="port-main-img" src="{% static 'images/gallery/dj/DSC_0153.jpg' %}" alt="Django Girls 1">
+                    </div>
+                    <div class="port-overlay-cont">
+                      <div class="port-btn-cont">
+                         <!-- <h3>CALENDAR</a></h3> -->
+                         <p>Django Girls - Trivandrum 2016</p>
+                      </div>
+                    </div>
+                  </a>  
+                </div>
+
+            </div>
+     
+  
+              <div class="popup-gallery" style="display: none;">
+               <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/dj/DSC_0001.jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/dj/DSC_0001.jpg' %}" alt="Django Girls 2">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+         
+
+            </div>
+              
+                <!-- IMG -->
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/dj/DSC_0006.jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/dj/DSC_0006.jpg' %}" alt="Django Girls 3">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                
+                <!-- IMG -->
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/dj/DSC_0022.jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/dj/DSC_0022.jpg' %}" alt="Django Girls 4">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                
+                <!-- IMG -->
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/dj/DSC_0032.jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/dj/DSC_0032.jpg' %}" alt="Django Girls 5">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                
+                <!-- IMG -->
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/dj/DSC_0035.jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/dj/DSC_0035.jpg' %}" alt="Django Girls 6">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+         
+
+            </div>
+             <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/dj/DSC_0057.jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/dj/DSC_0057.jpg' %}" alt="Django Girls 7">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+         
+
+            </div>
+
+             <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/dj/DSC_0068.jpg' %}">
+                      <div class="port-img-overlay' %}">
+                        <img class="port-main-img" src="{% static 'images/gallery/dj/DSC_0068.jpg' %}" alt="Django Girls 8">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+         
+
+            </div>
+
+             <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/dj/DSC_0070.jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/dj/DSC_0070.jpg' %}" alt="Django Girls 9">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+         
+
+            </div>
+             <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/dj/DSC_0072.jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/dj/DSC_0072.jpg' %}" alt="Django Girls 10">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+         
+
+            </div>
+             <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/dj/DSC_0139.jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/dj/DSC_0139.jpg' %}" alt="Django Girls 11">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+         
+
+            </div>
+             <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/dj/DSC_0142.jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/dj/DSC_0142.jpg' %}" alt="Django Girls 12">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+         
+
+            </div>
+             <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/dj/DSC_0150.jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/dj/DSC_0150.jpg' %}" alt="Django Girls 13">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+         
+
+            </div>
+
+            
+          </div>
+            
+     
+          
+              <!-- CONTENT -->
+              <div class="col-sm-6">
+                <div class="lightbox-item popup-gallery2 mb-30">
+                  <a href="{% static 'images/gallery/trip/DSC_0016.jpg' %}">
+                    <div class="port-img-overlay">
+                      <img class="port-main-img" src="{% static 'images/gallery/trip/DSC_0016.jpg' %}" alt="Tour - Ponmudi 1">
+                    </div>
+                    <div class="port-overlay-cont">
+                      <div class="port-btn-cont">
+                         <!-- <h3>CALENDAR</a></h3> -->
+                         <p>Tour - Ponmudi 2016</p>
+                      </div>
+                    </div>
+                  </a>  
+                </div>
+
+            </div>
+     
+
+            
+              <div class="popup-gallery2" style="display: none;">
+              
+                <!-- IMG -->
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (1).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (1).jpg' %}" alt="Tour - Ponmudi 2">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (2).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (2).jpg' %}" alt="Tour - Ponmudi 3">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (3).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (3).jpg' %}" alt="Tour - Ponmudi 4">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (4).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (4).jpg' %}" alt="Tour - Ponmudi 5">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (5).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (5).jpg' %}" alt="Tour - Ponmudi 6">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (6).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (6).jpg' %}" alt="Tour - Ponmudi 7">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (7).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (7).jpg' %}" alt="Tour - Ponmudi 8">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (8).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (8).jpg' %}" alt="Tour - Ponmudi 9">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (9).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (9).jpg' %}" alt="Tour - Ponmudi 10">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (10).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (10).jpg' %}" alt="Tour - Ponmudi 11">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (11).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (11).jpg' %}" alt="Tour - Ponmudi 12">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (12).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (12).jpg' %}" alt="Tour - Ponmudi 13">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (13).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (13).jpg' %}" alt="Tour - Ponmudi 14">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (14).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (14).jpg' %}" alt="Tour - Ponmudi 15">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (15).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (15).jpg' %}" alt="Tour - Ponmudi 16">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (16).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (16).jpg' %}" alt="Tour - Ponmudi 17">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (17).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (17).jpg' %}" alt="Tour - Ponmudi 18">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (18).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (18).jpg' %}" alt="Tour - Ponmudi 19">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (19).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (19).jpg' %}" alt="Tour - Ponmudi 20">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (20).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (20).jpg' %}" alt="Tour - Ponmudi 21">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (21).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (21).jpg' %}" alt="Tour - Ponmudi 22">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (22).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (22).jpg' %}" alt="Tour - Ponmudi 23">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (23).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (23).jpg' %}" alt="Tour - Ponmudi 24">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (24).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (24).jpg' %}" alt="Tour - Ponmudi 25">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (25).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (25).jpg' %}" alt="Tour - Ponmudi 26">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/1 (26).jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/1 (26).jpg' %}" alt="Tour - Ponmudi 27">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+
+                <!-- IMG -->
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/DSC_0040.jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/DSC_0040.jpg' %}" alt="Tour - Ponmudi 28">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                
+                <!-- IMG -->
+                <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/DSC_0068.jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/DSC_0068.jpg' %}" alt="Tour - Ponmudi 29">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                  <div class="col-sm-3 col-xs-6 mb-20">
+                  <div class="lightbox-item">
+                    <a href="{% static 'images/gallery/trip/pano.jpg' %}">
+                      <div class="port-img-overlay">
+                        <img class="port-main-img" src="{% static 'images/gallery/trip/pano.jpg' %}" alt="Tour - Ponmudi 30">
+                      </div>
+                      <div class="port-overlay-cont">
+                        <div class="port-btn-cont">
+                        </div>
+                      </div>
+                    </a>  
+                  </div>
+                </div>
+                
+          </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block footer %}
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(function(){
+            $.each(document.images, function(){
+                var this_image = this;
+                var src = $(this_image).attr('src') || '' ;
+                if(!src.length > 0){
+                    //this_image.src = options.loading; // show loading
+                    var lsrc = $(this_image).attr('lsrc') || '' ;
+                    if(lsrc.length > 0){
+                        var img = new Image();
+                        img.src = lsrc;
+                        $(img).load(function() {
+                            this_image.src = this.src;
+                        });
+                    }
+                }
+            });
+        });
+    });
+</script>
+{% endblock %}

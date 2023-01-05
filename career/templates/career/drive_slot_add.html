@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Labglo : Add Time Slot</title>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="page-header text-center">
+        <h1>Add Time Slots</h1>
+    </div>
+	<form action="" method="POST"> {% csrf_token %}
+		<p><input type="hidden" name="slot_date" value="2017-06-24"></p>
+		<p>ID: <input type="text" name="field_id" required="required"></p>
+		<p>Time: <input type="text" name="slot_time" required="required"></p>
+		<p><button type="submit" value="Submit">Submit</button></p>
+	</form>
+	<div id="id_msg">
+		{% if message %}
+			<p>{{ message }}</p>
+		{% endif %}
+	</div>
+</div>
+</body>
+</html>

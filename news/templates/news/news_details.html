@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    <title>LabGlo : News Room - {{ news_obj.title }}</title>
+{% endblock %}
+
+{% block content %}
+
+<!-- PAGE TITLE SMALL -->
+<div class="page-title-cont page-title-large page-title-img grey-dark-bg pt-250" style="background-image: urls('{% static 'images/work-proc-bg' %}')">
+    <div class="relative container align-left">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="page-title">News & Events</h1>
+            </div>
+      
+            <div class="col-md-4">
+                <div class="breadcrumbs">
+                    <a href="{% url 'core:home' %}">Home</a>
+                    <span>/</span>
+                    <span class="bread-current"><a href="{% url 'news:home' %}">News</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- COTENT CONTAINER -->
+<div class="container p-140-cont">
+    <div class="row">
+        <!-- CONTENT -->
+        <div class="col-sm-8 blog-main-posts">
+            {% if news_obj %}
+                <div class="blog-post wow fadeIn pb-50">
+                    <div class="post-prev-img">
+                        <a href="{% url 'news:news_details' news_obj.slug %}"><img src="{{ news_obj.image_url }}" alt="{{ news_obj.title }}"></a>
+                    </div>
+                    <div class="post-prev-title">
+                        <h3><a href="{% url 'news:news_details' news_obj.slug %}">{{ news_obj.title }}</a></h3>
+                    </div>
+                    <div class="post-prev-info">
+                        Published on {{ news_obj.created_on }}
+                    </div>
+                  
+                    <div class="post-prev-text">
+                        <p>{{ news_obj.description|safe }}</p>
+                    </div>
+
+                    <div class="post-prev-source">
+                        <p><b>Source:</b> <a href="{{ news_obj.source }}" target="_new">Click Here</a></p>
+                    </div>
+
+                    <div class="post-prev-more-cont clearfix">
+                        <div class="post-prev-more left">
+                            <div class="tags">
+                                {% for itm in news_obj.tag.all %}
+                                    <a href="{% url 'news:home' %}?tn={{ itm }}">{{ itm }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <div class="col-sm-8 blog-main-posts">
+                    <p>No data.</p>
+                </div>
+            {% endif %}
+          
+          <!-- DIVIDER -->
+          <hr class="mt-0 mb-0">
+          
+          <!-- WORK NAVIGATION -->
+          <!-- <div class="work-navigation clearfix">
+            <a href="#" class="work-prev"><span><span class="icon icon-arrows-left"></span>&nbsp;Prev</span></a>
+            <a href="{% url 'news:home' %}" class="work-all"><span>All Posts</span></a>
+            <a href="#" class="work-next"><span>Next&nbsp;<span class="icon icon-arrows-right"></span></span></a>
+          </div> -->
+          
+          <!-- DIVIDER -->
+          <hr class="mt-0 mb-0">
+                  
+            <!-- RELATED POSTS -->
+            <h4 class="blog-page-title mt-50 mb-25">RELATED POSTS</h4>
+            <div class="row related-posts">
+            {% if news_post %}
+                {% for nws_itm in news_post %}
+                    <!-- Post Item 1 -->
+                    <div class="col-sm-6 col-md-4 col-lg-4 wow fadeIn pb-50" >
+                        
+                      <div class="post-prev-img">
+                        <a href="{% url 'news:news_details' nws_itm.slug %}"><img src="{{ nws_itm.image_url}}" alt="{{ nws_itm.title }}"></a>
+                      </div>
+                        
+                      <div class="post-prev-title">
+                        <h3><a href="{% url 'news:news_details' nws_itm.slug %}">{{ nws_itm.title|safe|truncatechars:'50' }}</a></h3>
+                      </div>
+                        
+                      <div class="post-prev-info">
+                        {{ nws_itm.created_on }}
+                      </div>
+
+                    </div>
+                {% endfor %}
+            {% endif %}
+            </div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="col-sm-4 col-md-3 col-md-offset-1">
+            <!-- WIDGET -->
+            <div class="widget">
+                <div class="widget-body">
+                    <div class="tags">
+                        <p><a href="{% url 'news:home' %}">Go Back On News Page</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- WIDGET -->
+            <div class="widget">
+                <h5 class="widget-title">Tags</h5>
+                <div class="widget-body">
+                    <div class="tags">
+                        {% for itm in tag_list %}
+                            <a href="{% url 'news:home' %}?tn={{ itm.name }}">{{ itm.name }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
+

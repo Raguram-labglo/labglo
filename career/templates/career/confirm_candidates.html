@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Labglo : Confirmed Candidates</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/TableExport/4.0.11/css/tableexport.min.css">
+    <style>
+        table {
+            width:100%;
+            counter-reset: tableCount;
+        }
+        .counterCell:before {              
+            content: counter(tableCount); 
+            counter-increment: tableCount; 
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+        table#t01 tr:nth-child(even) {
+            background-color: #eee;
+        }
+        table#t01 tr:nth-child(odd) {
+           background-color:#fff;
+        }
+        table#t01 th {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <h1 style="text-align: center;">Confirmed Candidates</h1>
+        <p>Filter: <a href="?day=today">Today confirmed candidates</a> </p>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Mobile</th>
+                <th>Email Id</th>
+                <th>Is confirmed</th>
+                <th>Location</th>
+                <th>Address</th>
+                <th>Remarks 1</th>
+                <th>Remarks 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if confirm_candidates %}
+                {% for candidate in confirm_candidates %}
+                    <tr>
+                        <!-- <td class="counterCell"></td> -->
+                        <td>{{ candidate.id }}</td>
+                        <td>{{ candidate.first_name }}</td>
+                        <td>{{ candidate.last_name }}</td>
+                        <td>{{ candidate.mobile }}</td>
+                        <td>{{ candidate.email }}</td>
+                        <td>{{ candidate.has_confirmed_timeslot }}</td>
+                        <td>{{ candidate.location }} </td>
+                        <td>{{ candidate.address }}</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                {% endfor %}
+            {% endif %}
+        </tbody>
+        <p>Total candidates: {{ confirm_candidates.count }}</p>
+    </table>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://fastcdn.org/FileSaver.js/1.1.20151003/FileSaver.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/TableExport/4.0.11/js/tableexport.min.js"></script>
+
+    <script>
+        $("table").tableExport();
+    </script>
+
+</body>
+</html>
